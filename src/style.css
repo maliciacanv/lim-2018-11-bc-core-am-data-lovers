@@ -1,7 +1,28 @@
 body{
-    background-image: url("http://orig11.deviantart.net/41bd/f/2016/095/f/9/animated_syndra_wallpaper_by_cjxander-d9xn11i.gif");
+    background-image: url("https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/05/fondo-pantalla-league-legends_3.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+}
+#root{
+    margin-right: 5%;
+    margin-left: 5%;
+
+}
+
+
+header{
+    background-color: rgb(6, 6, 6, 0.9);
+    color: #F1C40F;
     text-align: center;
+    padding: 0.5% 0% 0.5% 0%;
+}
+
+nav > ul > li > a {
+    background-color: antiquewhite;
+    width: 50%;
+    height: 5%;
+    
+    
+
 }

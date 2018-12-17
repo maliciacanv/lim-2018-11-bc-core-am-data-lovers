@@ -1,20 +1,19 @@
+//conviertiendo la data objeto en array
+const arrDataLolTotal = Object.values(LOL.data);
+const containerListDatosHTML = document.getElementById("container-listimagens");
+//Llamar a mi funcion listarPersonajes -> name, title,img, atackrange
+const arrDataLolPrecisa = lol.listaPersonajes(arrDataLolTotal);
+for (let i = 0; i < arrDataLolPrecisa.length; i++){
+ containerListDatosHTML.innerHTML +=  `<div class="card-link">
+          <article class="blog-card">
+            <img class="post-image" src="${ arrDataLolPrecisa[i].img }" />
+            <div class="list-data">
+            <li class="post-name">${ arrDataLolPrecisa[i].name}</li>
+             <li class="post-title"> ${ arrDataLolPrecisa[i].title}</li>
+             <li class="post-attackrange">
+             Attackrange: ${ arrDataLolPrecisa[i].attackrange}</li>
+           </div>
+         </article>
+        </div>`
+}
 
-/*const dataLol = Object.values(LOL.data);
-
-for (let i = 0; i < arrKeys.length; i++){   
-    const champions = arrKeys[i];
-    const imgChampions = (`${champions.img} ${champions.name} ${champions.title}`);
-    document.write(imgChampions);
-    console.log(imgChampions);
-};*/
-
-const champions=Object.values(LOL.data);
-const obtenerPropiedad = (data) => {
-    let filterNew = [];
-    for (let i=0; i < data.length ;i++){
-      filterNew.push(data[i].tags);
-     // filterNew.push(data[i].name);
-  }
-  return filterNew;
-  }
-  document.write(obtenerPropiedad(champions)); 
