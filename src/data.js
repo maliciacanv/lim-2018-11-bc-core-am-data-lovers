@@ -15,6 +15,9 @@ const championsList = (arr) => {
   });
   return newArrayOrder.slice(0, 10);
 };
+const championRoles =  (arr2)=>{
+
+};
 
 window.lol = {
   championsList,
