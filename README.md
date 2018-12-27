@@ -538,16 +538,3 @@ compañera:
 * [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
 * [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [ ] UI: Permite filtrar data en base a una condición.
-# Definición del producto
-este proyecto se trata de crear una página amigable donde facilite al usuario que juega league of legends en poder encontrar y elegir sus mejores campeones según su preferencia, para ello hemos entrevistado aproximadamente a 10 usuarios,donde la mayoria ha coincidido con algunos puntos y lo hemos considerado en nuestra pagina.
-### Historias de Usuario
- 1era HU : yo como usuario quiero quiero que me muestre los 10 primeros mejores campeones que tengan mayor rango de ataque.
- para ello hemos realizado un sketch de baja fidelidad de como quedaría y que se necesita para lograrlo.
- ![sin titulo](imagenes/image1.jpg)
-## prototipo de baja fidelidad
- posteriormente logramos encontrar a un mayor detalle los pasos que se requiere para terminar la primera historia de usuario
- ![sin titulo](imagenes/image2.jpg)
- ![sin titulo](imagenes/image3.jpg)
- ## prototipo de alta fidelidad
- por ultimo realizamos un prototipo con ayuda de FIGMA de cómo quedaría nuestro proyecto con la primera historia de usuario.
- ![sin titulo](imagenes/Captura.PNG)
