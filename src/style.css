@@ -1,7 +1,108 @@
 body{
-    background-image: url(http://i.imgur.com/lIHvwHN.jpg)
+    background-image: url("");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-h1{
-    font-size: 50px;
-    text-align: center
+#root{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 2%;
+
 }
+
+footer{ 
+    background-color: rgb(6, 6, 6);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 15%;
+    color: blanchedalmond;
+    text-align: center;
+}
+*{
+    padding: 0%;
+    margin:0%;
+}
+header{
+    background-color: rgb(6, 6, 6);
+}
+header:hover{
+    background-color: rgb(6, 6, 6, 0.9);
+}
+
+#imagen1{
+    width: 20%;
+    margin-left: 40%;  
+}
+.menu{
+    width: 25%;
+    margin-top: -1%;
+}
+
+ul > li{ 
+list-style: none;
+
+}
+.menu nav ul li a{
+    background-color: rgb(6, 6, 6);
+    color: rgba(219, 209, 209, 0.849);
+    text-decoration: none;
+    padding: 5% 5%;
+    display: block;
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 15pt;
+    margin-top: 3%;
+
+
+}
+.menu nav ul li a:hover{
+    color: rgb(243, 218, 75);
+    box-shadow: 0 5px rgb(250, 191, 82);
+    background-color: rgb(7, 6, 6, 0.9);
+}
+.menu nav ul li ul{
+    display: none;
+    position: absolute;
+    min-width: 10%;
+    margin-left: 22.6%;
+    margin-top: -7%;
+}
+.menu nav ul li:hover> ul{ 
+    display: block;
+}
+.blog-card {
+    
+    flex-direction: row;
+    width: 13%;
+    box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.375rem;
+    background-color: rgb(5, 5, 5, 0.9); 
+    margin-top: 2%;
+    list-style: none;
+    text-align: center;
+    font-family: arial narrow;
+    
+  }
+  
+  .card-link:hover .post-title {
+    transition: color 0.3s ease;
+    color: #f7d309;
+  }
+  .card-link:hover .post-image {
+    transition: opacity 0.3s ease;
+    opacity: 0.9;
+  }
+  .post-image{
+      width: 50%;
+      padding: 5% 25% 5% 25% ;
+    
+  }
+  #container-listimagens    {
+
+      background-color: #f7d309;
+      
+
+     
+  }
+ 
+  

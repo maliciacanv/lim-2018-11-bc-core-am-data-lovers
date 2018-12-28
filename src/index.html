@@ -5,38 +5,41 @@
     <meta name="viewport" content="width=device-width,,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1..0">
     <title>LOL</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="fonts.css" />
   </head>
   <body>
-    <header>
-      <h1>LEAGUE OF LEGENDS</h1>
-    </header>
+    <div id="root">
       <header>
-          <div class="roles">
-            <a href="#" class="bt-menu"><span class="icon-eye"></span>Campeones por Roles </a>
-          </div>
-          <nav>
-             <ul>
-            <li><a href="#">ASESINO</a></li>
-            <li><a href="#">LUCHADOR</a></li>
-            <li><a href="#">MAGO</a></li>
-            <li><a href="#">TIRADOR</a></li>
-            <li><a href="#">SOPORTE</a></li>
-            <li><a href="#">TANQUE</a></li>
-             </ul>
-          </nav>
-         
-        </header>
-
-    <div id="root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <script src="./data/lol/lol.js"></script> 
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  
-
+        <img id= "imagen1" src="https://cdn.atomix.vg/wp-content/uploads/2013/08/LOL.png">
+      </header>
+      <div class= "menu">
+        <nav>
+          <ul>
+            <li><a href="#value" id="topon"><i class="icon icon-dial-pad"></i> TOP TEAM</a></li>
+            <li><a href="#value" value= "roles" id= "roles"><i class="icon icon-shield"></i> CHAMPIONS BY ROLES</a>
+              <ul>
+                <li><a href="#" value="Assassin" id="Assassin">ASSESSIN</a></li>
+                <li><a href="#" value="Fighter"  id="Fighter">FIGHTER</a></li>
+                <li><a href="#" value="Mage"     id="Mage">MAGE</a></li>
+                <li><a href="#" value="Marksman" id="Marksman">MARKSMAN</a></li>
+                <li><a href="#" value="Support" id="Support">SUPPORT</a></li>
+                <li><a href="#" value="Tank" id="Tank">TANK</a></li>
+              </ul>
+            </li>
+            <li><a href="#value" id="Characteristics"><i class="icon icon-v-card"></i> CHARACTERISTICS</a></li>
+            <li><a href="#value" id="Statistics"><i class="icon icon-area-graph"></i> STATISTICS</a></li>
+          </ul>
+      </div>
+    </div>
+      <div id="container-listimagens"></div>
+      <div id="container-listroles"></div>
+      </select>
+      <footer>
+        <p>By:Malicia & Lucero</p>
+      
+      </footer>
+      <script src="./data/lol/lol.js"></script>
+      <script src="data.js"></script>
+      <script src="main.js"></script>
   </body>
 </html>
