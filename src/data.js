@@ -1,14 +1,14 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+// primer historia de usuario pide mostrar los 10 mejores campeones y medido por su ataque de rango//
 const championsList = (arr) => {
   const newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    newArray.push({ name: arr[i].name, title: arr[i].title, splash: arr[i].splash, attackrange: arr[i].stats.attackrange });
+    newArray.push({ name: arr[i].name, title: arr[i].title, splash: arr[i].splash, attackrange: arr[i].stats.attackrange, tags: arr[i].tags });
   }
   const newArrayOrder = newArray.sort((higher, less) => {
     if (higher.attackrange < less.attackrange) {
       return 1;
-    } else {
+    }
+    else {
       return -1;
     }
   });

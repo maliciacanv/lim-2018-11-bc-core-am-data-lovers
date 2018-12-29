@@ -1,14 +1,9 @@
 // conviertiendo la data objeto en array//
-// eslint-disable-next-line no-undef
 const arrDataLolTotal = Object.values(LOL.data);
-const containerListDatosHTML = document.getElementById('container-listimagens');
-
-
+const containerListDatosHTML = document.getElementById('container-listImagens');
+// Llamar a mi funcion listarPersonajes -> name, title, img, atackrange//
 const arrDataLolPrecisa = lol.championsList(arrDataLolTotal);
-const firstUser = document.getElementById('topon');
-
-
-
+const firstUser = document.getElementById('topteam');
 firstUser.addEventListener('click', () => {
   for (let i = 0; i < arrDataLolPrecisa.length; i++) {
     containerListDatosHTML.innerHTML +=

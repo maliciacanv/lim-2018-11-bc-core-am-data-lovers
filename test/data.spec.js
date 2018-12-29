@@ -106,6 +106,7 @@ const returnChampionsList  = [
   },
 ]
 
+<<<<<<< HEAD
   const listOfChampions = [ 
     {  img:"https://www.masterypoints.com/assets/img/lol/champion_icons/Aatrox.png", name: "Aatrox", title: "the Darkin Blade", attackrange: 150},
     { img:"https://www.masterypoints.com/assets/img/lol/champion_icons/Ahri.png", name: "Ahri",  title: "the Nine-Tailed Fox", attackrange: 550}
@@ -114,9 +115,17 @@ const returnChampionsList  = [
 describe('lol', () => {
   it('deberia ser un objeto', () => {
     expect(typeof example).toBe('function');
+=======
+
+describe('lol', () => {
+  it('deberia ser un objeto', () => {
+    expect(typeof lol).toBe('object');
+>>>>>>> 958795f810f5266e9d6d998e86d2ebd2694c3a67
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  describe('lol.championsList', () => {
+    it('deberia ser una funcion', () => { 
+      expect(typeof lol.championsList). toBe('function');
+    });
   });
 });
