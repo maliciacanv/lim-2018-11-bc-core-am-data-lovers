@@ -1,5 +1,5 @@
 body{
-    background-image: url("");
+    background-image: ur("http://images6.fanpop.com/image/photos/37400000/League-Of-Legends-Sejuani-league-of-legends-37475278-1215-717.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -108,3 +108,7 @@ list-style: none;
     height: 9em;
     border-radius: 5%;
   }
+#listNames{
+    width: 20%;
+    float: left;
+}

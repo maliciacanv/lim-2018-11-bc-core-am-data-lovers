@@ -2,7 +2,7 @@
 const championsList = (arr) => {
   const newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    newArray.push({ name: arr[i].name, title: arr[i].title, splash: arr[i].splash, attackrange: arr[i].stats.attackrange, tags: arr[i].tags });
+    newArray.push({ name: arr[i].name, title: arr[i].title, splash: arr[i].splash, attackrange: arr[i].stats.attackrange});
   }
   const newArrayOrder = newArray.sort((higher, less) => {
     if (higher.attackrange < less.attackrange) {
@@ -15,24 +15,12 @@ const championsList = (arr) => {
   return newArrayOrder.slice(0, 10);
 };
 // segunda historia de usuario pide filtrar los campeones por roles: asesino,mago,tanque//
-const championsPerRoles = (arr) => {
-  let newArrayRol = [];
-  for (let i = 0; i < arr.length; i++) {
-    newArrayRol.push({ tags: arr[i].tags, name: arr[i].name, splash: arr[i].splash });
-  }
-  const yy = newArrayRol.filter(ele => {
-    if (ele.tags.includes('Assassin')) {
-      return true;
-    }
-    else if (ele.tags.includes('Fighter')) {
-      return true;
-    }
-  });
-  console.log(yy);
-};
+
+
+
+// tercera historia de usuario desea buscar por campeon y que le muestre sus infomacion importante//
+
 
 window.lol = {
   championsList,
-  championsPerRoles,
 };
-

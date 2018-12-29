@@ -1,9 +1,15 @@
 // conviertiendo la data objeto en array//
 const arrDataLolTotal = Object.values(LOL.data);
+const arrNamesTotal = Object.keys(LOL.data);
+
+console.log(arrNamesTotal);
+// mostrando el primer historia de usuario //
+// llamando al id del contenedor html//
 const containerListDatosHTML = document.getElementById('container-listImagens');
+
 // Llamar a mi funcion listarPersonajes -> name, title, img, atackrange//
 const arrDataLolPrecisa = lol.championsList(arrDataLolTotal);
-const firstUser = document.getElementById('topteam');
+const firstUser = document.getElementById('topTeam');
 firstUser.addEventListener('click', () => {
   for (let i = 0; i < arrDataLolPrecisa.length; i++) {
     containerListDatosHTML.innerHTML +=
@@ -15,20 +21,44 @@ firstUser.addEventListener('click', () => {
        </div>`;
   }
 });
-console.log(containerListDatosHTML);
+
+// mostrando el segundo historia de usuario //
+
+document.getElementById('filterRoles').style = 'display:none';
+const charac = document.getElementById('role');
+
+const navFilter = () => {
+  document.getElementById('container-listImagens').style = 'display:none';
+  document.getElementById('filterRoles').style = 'display:block';
+};
+
+charac.addEventListener('click', navFilter);
 
 
-const containerListRolesHTML = document.getElementById('container-listRoles');
-const arrListDeRoles = lol.championsPerRoles(arrDataLolTotal);
-const firstUserRol = document.getElementById('assassin');
-firstUserRol.addEventListener('click', () => {
-  for (let i = 0; i < arrListDeRoles.length; i++) {
-    containerListRolesHTML.innerHTML +=
-      `<div class ="card-list">
-          <img class ="image" src = "${arrListDeRoles[i].splash}"/>
-          <li class ="name"> ${arrListDeRoles[i].name}</li>
-        </div>`;
-  }
+const arrDataRoles = lol.filterData(arrDataLolTotal, type);
+
+const type = document.getElementById('filterRoles').input;
+const us= () => {
+  for (let i = 0; i < type.length; i++) {
+    if (type[i].value===true) {
+      user = user.value;
+    }
+  }  
+};
+
+
+
+
+
+
+
+
+// mostrando tercer historia de usuario
+const yy = document.getElementById('container-listNames');
+const gg = document.getElementById('characteristics');
+gg.addEventListener('click', () => {
+    yy.innerHTML +={
+    }
 });
-console.log(containerListRolesHTML);
-console.log(firstUserRol);
+
+

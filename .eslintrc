@@ -37,6 +37,7 @@
  },
   "extends": "eslint:recommended",
   "globals": {
-    "lol": false
+    "lol": false,
+    "LOL": true
   }
 }
