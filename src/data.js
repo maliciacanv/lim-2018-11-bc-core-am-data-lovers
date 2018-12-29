@@ -22,10 +22,15 @@ const filterData = (data, type) => {
   });
   return filterRoles;
 };
+const filterInfochampions = (data) => {
+  const filterDataChampions = data.map(character => Object.assign({}, { splash: character.splash, name: character.name, info: character.info }));
+  return filterDataChampions;
+};
 
 window.lol = {
 
   championsList,
   filterData,
+  filterInfochampions,
 };
 

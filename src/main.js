@@ -1,9 +1,10 @@
-// conviertiendo la data objeto en array//
+
+// eslint-disable-next-line no-undef
 const arrDataLolTotal = Object.values(LOL.data);
 const containerListDatosHTML = document.getElementById('container-listImagens');
 // Llamar a mi funcion listarPersonajes -> name, title, img, atackrange//
 const arrDataLolPrecisa = lol.championsList(arrDataLolTotal);
-const firstUser = document.getElementById('topteam');
+const firstUser = document.getElementById('topTeam');
 firstUser.addEventListener('click', () => {
   for (let i = 0; i < arrDataLolPrecisa.length; i++) {
     containerListDatosHTML.innerHTML +=
@@ -20,9 +21,10 @@ firstUser.addEventListener('click', () => {
           </div>`;
   }
 });
-const type = 'Tank';
-const arrDataRole = lol.filterData(arrDataLolTotal, type);
+//const type = 'Tank';
+//const arrDataRole = lol.filterData(arrDataLolTotal, type);
+//console.log(arrDataRole);
 
-console.log(arrDataRole);
 
-
+const arrDataInfoRole = lol.filterInfochampions(arrDataLolTotal);
+console.log(arrDataInfoRole);
