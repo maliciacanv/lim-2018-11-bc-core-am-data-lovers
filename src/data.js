@@ -15,7 +15,7 @@ const championsList = (arr) => {
   return newArrayOrder.slice(0, 10);
 };
 const filterData = (data, type) => {
- const filterNewData = data.map(importData => Object.assign({}, {name: importData.name,splash: importData.splash,tags:importData.tags}));
+  const filterNewData = data.map(importData => Object.assign({}, { name: importData.name, splash: importData.splash, tags: importData.tags }));
 
   const filterRoles = filterNewData.filter((data) => {
     return data.tags.includes(type) === true;
