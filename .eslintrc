@@ -33,7 +33,7 @@
     "no-array-constructor": 1,
     "no-const-assign": "error",
     "no-var": "error",
-    "no-console" :  0 
+    "no-console":0
  },
   "extends": "eslint:recommended",
   "globals": {

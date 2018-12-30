@@ -46,13 +46,6 @@ const us= () => {
   }  
 };
 
-
-
-
-
-
-
-
 // mostrando tercer historia de usuario
 const yy = document.getElementById('container-listNames');
 const gg = document.getElementById('characteristics');
@@ -60,5 +53,10 @@ gg.addEventListener('click', () => {
     yy.innerHTML +={
     }
 });
+//const type = 'Tank';
+//const arrDataRole = lol.filterData(arrDataLolTotal, type);
+//console.log(arrDataRole);
 
 
+const arrDataInfoRole = lol.filterInfochampions(arrDataLolTotal);
+console.log(arrDataInfoRole);
