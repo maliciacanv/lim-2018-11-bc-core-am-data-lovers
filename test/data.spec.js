@@ -1,4 +1,5 @@
 require('../src/data.js');
+<<<<<<< HEAD
 const returnChampionsList  = [ 
   {
   version: "6.24.1",
@@ -116,16 +117,51 @@ describe('lol', () => {
   it('deberia ser un objeto', () => {
     expect(typeof example).toBe('function');
 =======
+=======
+const input = { data: { 
+  { name: 'Aatrox', title: "the Darkin Blade", splash: "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
+    attackrange: 150
+  },
+  { 
+    name: "Ahri", title: "the Nine-Tailed Fox", splash: "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
+    attackrange: 550
+  },
+  {
+    name:"Akali", title:"the Fist of Shadow", splash:"http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg",
+    attackrange: 125
+  },
+};
 
-describe('lol', () => {
+const output = [
+  {
+    name: "Ahri", title: "the Nine-Tailed Fox", splash: "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
+    attackrange: 550
+  },
+  {
+    name: "Aatrox", title: "the Darkin Blade", splash: "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
+    attackrange: 150
+  },
+  {
+    name:"Akali", title:"the Fist of Shadow", splash:"http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg",
+    attackrange: 125
+  },
+];
+>>>>>>> 9d017326de9bee15f3958a0fc77cb69d5d588a13
+
+describe('LOL', () => {
   it('deberia ser un objeto', () => {
+<<<<<<< HEAD
     expect(typeof lol).toBe('object');
 >>>>>>> 958795f810f5266e9d6d998e86d2ebd2694c3a67
+=======
+    expect(typeof LOL).toBe('object');
+>>>>>>> 9d017326de9bee15f3958a0fc77cb69d5d588a13
   });
 
   describe('lol.championsList', () => {
-    it('deberia ser una funcion', () => { 
-      expect(typeof lol.championsList). toBe('function');
+    it('deberia ser una funcion', () => {
+      expect(typeof lol.championsList).toBe('function');
     });
-  });
-});
+
+      });
+    });
