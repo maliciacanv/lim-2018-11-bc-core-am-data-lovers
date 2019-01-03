@@ -61,6 +61,5 @@ window.lol = {
   championsList,
   championsList2,
   filtrarRoles,
-  // filterData,
-  // filterInfochampions,
+  
 };

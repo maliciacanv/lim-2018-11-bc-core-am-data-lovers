@@ -44,8 +44,8 @@ const crearTemplate = (x) => {
 
 //En el click del botón estoy haciendo uso a la función filtrarRoles
 btnFiltrar.addEventListener('click', () => {
-  const x = lol.filtrarRoles(arrDataLolPrecisa2, listaRoles.value);
-  crearTemplate(x);
+  const resultFilter = lol.filtrarRoles(arrDataLolPrecisa2, listaRoles.value);
+  crearTemplate(resultFilter);
   //console.log(x);
 });
 
@@ -55,17 +55,7 @@ btnFiltrar.addEventListener('click', () => {
 
 
 // eslint-disable-next-line no-unused-vars
-const createTemplate = (data) => {
-  let templateRoles = "";
-  data.forEach((data) => {
-    let containerFilter = `<div class="card-link">
-    <label class="post-name">${data.name}</label>
-    <img class="post-image" src="${data.splash}"/>
-</div>`;
-    templateRoles += containerFilter;
-  });
 
-}
 // containerListRolesHTML.innerHTML += templateRoles;
 
 // lol.filterData(arrDataLolTotal)
