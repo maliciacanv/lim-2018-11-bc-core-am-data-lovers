@@ -1,4 +1,3 @@
-// primer historia de usuario pide mostrar los 10 mejores campeones y medido por su ataque de rango//
 const championsList = (arr) => {
   const newArray = [];
   for (let i = 0; i < arr.length; i++) {
@@ -15,25 +14,10 @@ const championsList = (arr) => {
   });
   return newArrayOrder.slice(0, 10);
 };
+
 // segunda historia de usuario pide filtrar los campeones por roles: asesino,mago,tanque//
-/*const filterData = (data, type) => {
-  const filterNewData = data.map(importData => Object.assign({}, { name: importData.name, splash: importData.splash, tags: importData.tags }));
 
-  const filterRoles = filterNewData.filter((ele) => {
-    for (let i = 0; i < ele.tags.length; i++) {
-      if (ele.tags[i] === type) {
-        return true;
-      }
-    }
-  });
-  return filterRoles;
-};
-// tercera historia de usuario desea buscar por campeon y que le muestre sus infomacion importante//
-const filterInfochampions = (data) => {
-  const filterDataChampions = data.map(character => Object.assign({}, { splash: character.splash, name: character.name, info: character.info }));
-  return filterDataChampions;
 
-};*/
 //Pusheando un array que contenga nombre, splash y tags
 const championsList2 = (arr) => {
     const newa = [];
@@ -56,11 +40,19 @@ const filtrarRoles = (data, rol) => {
     
   return arrayDeRoles;
 }
-  
+
+
+// tercera historia de usuario desea buscar por campeon y que le muestre sus infomacion importante//
+const filterInfoChampions = (data, tipo) => {
+  const filterData = data.filter((ele) => {
+    return (ele.name === tipo); 
+  });
+  return filterData;
+};
+
 window.lol = {
   championsList,
   championsList2,
   filtrarRoles,
-  // filterData,
-  // filterInfochampions,
+  filterInfoChampions,
 };
