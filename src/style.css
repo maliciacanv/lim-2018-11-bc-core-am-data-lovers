@@ -1,8 +1,18 @@
 body{
-    background-image: url("");
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin: 0;
+    
+}
+.card-bytags{
+    display: inline-grid;
+}
+video{
+position: fixed;
+min-width:100%;
+min-height:100;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+z-index: -1;
 }
 #root{
     margin-right: 5%;
@@ -42,14 +52,12 @@ ul > li{
     
     }
 @media screen and (max-width:725px) {
-    .body{
-        background-color: #f76809;
-    }
+    
     .menu{
         width: 100%;
         margin-top: -1%;       
 }
-.menu nav ul li a{
+menu nav ul li a{
 background-color: rgba(185, 197, 20, 0.959);
     color: rgba(126, 125, 125, 0.849);
 }
