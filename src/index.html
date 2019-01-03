@@ -8,9 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-      <!-- <video src="animated-lunarrevel-2015.webm" autoplay loop> -->
-      <div id="root">
+
+    <video src="lunarrevel-2018-webm.webm" autoplay loop></video>
+    <div id="root"
       <img id= "imagen1" src="https://cdn.atomix.vg/wp-content/uploads/2013/08/LOL.png">
+
       <header>
           <nav>
             <ul>
@@ -20,7 +22,7 @@
               <li><a href="#" id="statistics"><i class="icon icon-area-graph"></i> ESTADISTICA </a></li>
             </ul>
           </nav>
-        </header>    
+    </header> 
       <section id="screem-principal">
         <hr><P>CAMPEONES</p><hr>
           <h2 class="text1">League of Legends es un juego competitivo en línea de ritmo frenético, 
@@ -41,7 +43,19 @@
               <label><input type="checkbox" name="support" value="Support"> Support  </label>
               <label><input type="checkbox" name="marksman" value="Marksman"> Marksman  </label>
             </form>
+     
+         <div id="roles"> 
+          <select name="" id="list-roles">
+             <option  value="Fighter">fighter</option>
+             <option value="Mage">mage</option>
+             <option value="Tank">tank</option>
+             <option value="Tank">tank</option>
+             <option value="Tank">tank</option>
+             <option value="Tank">tank</option>
+          </select>
+          <button id="btn-filtrar">filtrar</button>
           <div id="container-filterRoles"></div>
+        </div>
       </section>
       <section id = 'screem-filterInfo'>
         <select id='selection'></select>

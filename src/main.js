@@ -43,6 +43,7 @@ const mostrarSecondScreem = () => {
   document.getElementById('screem-top').style = 'display:block';
   for (let i = 0; i < arrDataLolTopTeam.length; i++) {
     containerTopTeam.innerHTML +=
+
       `<div class="card-link">
               <img class="post-image" src="${arrDataLolTopTeam[i].splash}"/>
               <li class="post-name">${arrDataLolTopTeam[i].name}</li>
@@ -50,8 +51,27 @@ const mostrarSecondScreem = () => {
               <li class="post-attackrange">Attackrange: ${arrDataLolTopTeam[i].attackrange}</li>
        </div>`;
   }
-};
-// mostrando segundo usuario filter por roles //
+
+//Creando template
+const crearTemplate = (x) => {  
+  x.forEach((x) => {
+    contatinerByTags.innerHTML +=
+      `<div class="card-bytags">
+      <img class="post-image" src="${x.splash}"/>
+      <li class="post-name">${x.name}</li>      
+    </div>`;
+  });
+}
+
+
+//En el click del botón estoy haciendo uso a la función filtrarRoles
+btnFiltrar.addEventListener('click', () => {
+  const x = lol.filtrarRoles(arrDataLolPrecisa2, listaRoles.value);
+  crearTemplate(x);
+  //console.log(x);
+});
+
+
 
 // mostrando tercer usuario //
 const mostrarInfo = () => {
@@ -83,9 +103,5 @@ buttonFilter.addEventListener('click', () => {
 // eventos en la barra de navegacion //
 buttonfirstUser.addEventListener('click', mostrarSecondScreem);
 buttonThirdUser.addEventListener('click', mostrarInfo);
-
-
-
-
 
 
