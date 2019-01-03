@@ -7,48 +7,55 @@
     <link rel="stylesheet" href="fonts.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  
   <body>
-    <div id="root">
+      <!-- <video src="animated-lunarrevel-2015.webm" autoplay loop> -->
+      <div id="root">
+      <img id= "imagen1" src="https://cdn.atomix.vg/wp-content/uploads/2013/08/LOL.png">
       <header>
-        <img id= "imagen1" src="https://cdn.atomix.vg/wp-content/uploads/2013/08/LOL.png">
-      </header>
-        <div class= "menu">
           <nav>
             <ul>
-              <li><a href="#top" id="topTeam"><i class="icon icon-dial-pad"></i> TOP TEAM</a></li>
-              <li><a href="#roles" id="role"><i class="icon icon-shield"></i> CHAMPIONS BY ROLES</a></li>
-              <li><a href="#value" id="characteristics"><i class="icon icon-v-card"></i> CHARACTERISTICS</a></li>
-              <li><a href="#value" id="statistics"><i class="icon icon-area-graph"></i> STATISTICS</a></li>
+              <li><a href="#" id="topTeam"><i class="icon icon-dial-pad"></i> TOP 10 </a></li>
+              <li><a href="#" id="rol"><i class="icon icon-shield"></i> CAMPEONES POR ROLES</a></li>
+              <li><a href="#" id="characteristics"><i class="icon icon-v-card"></i> CARACTERISTICAS </a></li>
+              <li><a href="#" id="statistics"><i class="icon icon-area-graph"></i> ESTADISTICA </a></li>
             </ul>
           </nav>
-        </div>
-        <div id="roles"> 
-          <nav> 
+        </header>    
+      <section id="screem-principal">
+        <hr><P>CAMPEONES</p><hr>
+          <h2 class="text1">League of Legends es un juego competitivo en línea de ritmo frenético, 
+                aquí te mostraremos los todos los campeones existentes, donde tu podras conocer sus caracteristicas,
+                un top de los 10 mejores campeones y filtrar por sus roles.
+          </h2>
+          <div id ="container-listChampions"></div>  
+      </section>
+      <section id="screem-top">
+        <div id="container-topTeam"></div>
+      </section>
+      <section id='screem-filter'>
           <form id="filterRoles">
-            <label><input type="checkbox" name="assassin" value="Assassin">Assassin</label>
-            <label><input type="checkbox" name="fighter" value="Fighter">Fighter</label>
-            <label><input type="checkbox" name="mage" value="Mage">Mage</label>
-            <label><input type="checkbox" name="tank" value="Tank">Tank</label>
-            <label><input type="checkbox" name="support" value="Support">Support</label>
-            <label><input type="checkbox" name="marksman" value="Marksman">Marksman</label>
-          </form>
-          </nav>
-        </div>
-        <div id="container-listImagens"></div>
-        <div id="container-listRoles"></div>
-        <div id="container-listNames"></div>
-        <select>
-
-        </select>
-
-    
+              <label><input type="checkbox" name="assassin" value="Assassin"> Assassin  </label>
+              <label><input type="checkbox" name="fighter" value="Fighter"> Fighter  </label>
+              <label><input type="checkbox" name="mage" value="Mage"> Mage  </label>
+              <label><input type="checkbox" name="tank" value="Tank"> Tank  </label>
+              <label><input type="checkbox" name="support" value="Support"> Support  </label>
+              <label><input type="checkbox" name="marksman" value="Marksman"> Marksman  </label>
+            </form>
+          <div id="container-filterRoles"></div>
+      </section>
+      <section id = 'screem-filterInfo'>
+        <select id='selection'></select>
+        <button type="button" id="buttonFilter">Champions</button>
+        <div id='container-filterInfo'></div>
+      </section>
       <footer> 
       </footer>
-    </div>
 
+    </div>
+    
       <script src="./data/lol/lol.js"></script>
       <script src="data.js"></script>
       <script src="main.js"></script>
+    </video>
   </body>
 </html>
