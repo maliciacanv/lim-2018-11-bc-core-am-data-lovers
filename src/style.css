@@ -1,10 +1,5 @@
-
 body{
     margin: 0;
-    
-}
-.card-bytags{
-    display: inline-grid;
 }
 video{
 position: fixed;
@@ -14,26 +9,13 @@ top: 50%;
 left: 50%;
 transform: translateX(-50%) translateY(-50%);
 z-index: -1;
-
-body video{
-position: fixed;
-z-index: inherit -1;
-width: 100%;
-height: 100%;
-
 }
+
 #root{
     margin-right: 5%;
     margin-left: 5%;
 }
-footer{ 
-    background-color: rgb(6, 6, 6);
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 15%;
-    color: blanchedalmond;
-    text-align: center;
-}
+
 *{
     padding: 0%;
     margin:0%;
@@ -86,16 +68,16 @@ nav > ul li a:hover{
     color: rgb(179, 154, 12);
     background-color: rgb(7, 6, 6, 0.9);
 }
-#container-listChampions, #container-topTeam{
-       display: flex;
-       flex-wrap: Wrap;
-       flex-direction: row;
-       justify-content: space-around;
-       list-style: none;
-       justify-content: space-evenly;
-       margin-right: 8%;
-       margin-left: 8%;
-     }
+#container-listChampions, #container-topTeam, #container-filterRoles{
+    display: flex;
+    flex-wrap: Wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    justify-content: space-evenly;
+    margin-right: 8%;
+    margin-left: 8%;
+}
 #container-listChampions{
     margin-left: 0%;
     margin-top: 3%;
@@ -107,9 +89,6 @@ p{
     font-size: 20pt;
     font-family: 'Courier New', Courier, monospace;
 }
-p:hover{
-    color: #eed816da;
-}
 section hr{
     height: 1px;
     background: #f7b603e3;
@@ -120,9 +99,6 @@ section hr{
     font-size: 13pt;
     color: black;
     text-align: center;
-}
-.text1:hover{
-    color: rgb(250, 153, 26);
 }
 .cards{
     margin-top: 1%;
@@ -216,7 +192,7 @@ figure .trasera .title{
   }
 
 
-  #filterRoles{ 
+#filterRoles{ 
     background-color:#a2ab58;
     width: 50%;
     padding: 2% 2% 2% 2%;

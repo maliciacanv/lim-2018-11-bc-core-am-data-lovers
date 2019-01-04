@@ -1,23 +1,23 @@
 // conviertiendo la data objeto en array//
 const arrDataLolTotal = Object.values(LOL.data);
-
 // llamando a los id de html //
 const containerPrincipal = document.getElementById('container-listChampions');
-
 document.getElementById('screem-top').style = 'display:none';
 const buttonfirstUser = document.getElementById('topTeam');
 const containerTopTeam = document.getElementById('container-topTeam');
 
-document.getElementById('screem-filter').style = 'display:none';
+document.getElementById('screem-filterRoles').style = 'display:none';
+const buttonSecondUser = document.getElementById('rol');
+const selectionRoles = document.getElementById('list-roles');
+const buttonFilterRoles = document.getElementById('button-filterRol');
+const containerFilterRoles = document.getElementById('container-filterRoles');
 
 document.getElementById('screem-filterInfo').style = 'display:none';
 const buttonThirdUser = document.getElementById('characteristics');
 const selectionOption = document.getElementById('selection');
 const containerFilterInfo = document.getElementById('container-filterInfo');
-const buttonFilter = document.getElementById('buttonFilter');
-// llamando a los array del data.js //
-const arrDataLolTopTeam = lol.championsList(arrDataLolTotal);
-// mostrando todos los campeones en la pagina principal //
+const buttonFilter = document.getElementById('button-filterInfo');
+// mostrando todos los campeones en la pagina principal 
 const createTemplateCard = (list) => {
   let templateCard = '';
   list.forEach((dataLol) => {
@@ -34,16 +34,16 @@ const createTemplateCard = (list) => {
     </div>`;
     templateCard += card;
   }),
-    containerPrincipal.innerHTML = templateCard;
+  containerPrincipal.innerHTML = templateCard;
 };
 createTemplateCard(arrDataLolTotal);
 // mostrando primer usuario topTeam //
-const mostrarSecondScreem = () => {
+const arrDataLolTopTeam = lol.championsTopTeam(arrDataLolTotal);
+const showTopTeam = () => {
   document.getElementById('screem-principal').style = 'display:none';
   document.getElementById('screem-top').style = 'display:block';
   for (let i = 0; i < arrDataLolTopTeam.length; i++) {
     containerTopTeam.innerHTML +=
-
       `<div class="card-link">
               <img class="post-image" src="${arrDataLolTopTeam[i].splash}"/>
               <li class="post-name">${arrDataLolTopTeam[i].name}</li>
@@ -51,31 +51,32 @@ const mostrarSecondScreem = () => {
               <li class="post-attackrange">Attackrange: ${arrDataLolTopTeam[i].attackrange}</li>
        </div>`;
   }
-
-//Creando template
-const crearTemplate = (x) => {  
-  x.forEach((x) => {
-    contatinerByTags.innerHTML +=
+};
+// Creando template para el segundo usuario 
+const showFilterRoles = (data) => {
+  let templateFilter = '';
+  document.getElementById('screem-top').style = 'display:none';
+  document.getElementById('screem-filterRoles').style = 'display:block';
+  data.forEach((element) => {
+    const cardsFilter = 
       `<div class="card-bytags">
-      <img class="post-image" src="${x.splash}"/>
-      <li class="post-name">${x.name}</li>      
+      <img class="post-image" src="${element.splash}"/>
+      <li class="post-name">${element.name}</li>      
     </div>`;
+    templateFilter += cardsFilter;
   });
-}
-
-
-//En el click del botón estoy haciendo uso a la función filtrarRoles
-btnFiltrar.addEventListener('click', () => {
-  const x = lol.filtrarRoles(arrDataLolPrecisa2, listaRoles.value);
-  crearTemplate(x);
-  //console.log(x);
+  containerFilterRoles.innerHTML = templateFilter;
+};
+// click del botón estoy haciendo uso a la función filtrarRoles
+buttonFilterRoles.addEventListener('click', () => {
+  const arrDataLolFilterRoles = lol.championsFilterRoles(arrDataLolTotal, selectionRoles.value);
+  showFilterRoles(arrDataLolFilterRoles);
+  console.log(arrDataLolFilterRoles);
 });
 
-
-
 // mostrando tercer usuario //
-const mostrarInfo = () => {
-  document.getElementById('screem-filter').style = 'display:none';
+const showFilterInfo = () => {
+  document.getElementById('screem-filterRoles').style = 'display:none';
   document.getElementById('screem-filterInfo').style = 'display:block';
   for (let i = 0; i < arrDataLolTotal.length; i++) {
     selectionOption.innerHTML += `<option value='${arrDataLolTotal[i].name}'>${arrDataLolTotal[i].name}</option>`;
@@ -95,13 +96,12 @@ const templateInfoOfChampions = (data) => {
   });
   containerFilterInfo.innerHTML = postCard;
 };
+
 buttonFilter.addEventListener('click', () => {
   const resultFilterSelect = lol.filterInfoChampions(arrDataLolTotal, selectionOption.value);
   templateInfoOfChampions(resultFilterSelect);
 });
 
-// eventos en la barra de navegacion //
-buttonfirstUser.addEventListener('click', mostrarSecondScreem);
-buttonThirdUser.addEventListener('click', mostrarInfo);
-
-
+buttonfirstUser.addEventListener('click', showTopTeam);
+buttonSecondUser.addEventListener('click', showFilterRoles);
+buttonThirdUser.addEventListener('click', showFilterInfo);
