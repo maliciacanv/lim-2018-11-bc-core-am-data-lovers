@@ -6,14 +6,12 @@ document.getElementById('screem-top').style = 'display:none';
 const buttonfirstUser = document.getElementById('topTeam');
 const containerTopTeam = document.getElementById('container-topTeam');
 
-document.getElementById('screem-filterRoles').style = 'display:none';
-const buttonSecondUser = document.getElementById('rol');
+document.getElementById('screem-filterRolesAndCharacteristics').style = 'display:none';
+const buttonSecondAndThirdUser = document.getElementById('rolAndCharacteristics');
 const selectionRoles = document.getElementById('list-roles');
 const buttonFilterRoles = document.getElementById('button-filterRol');
 const containerFilterRoles = document.getElementById('container-filterRoles');
 
-document.getElementById('screem-filterInfo').style = 'display:none';
-const buttonThirdUser = document.getElementById('characteristics');
 const selectionOption = document.getElementById('selection');
 const containerFilterInfo = document.getElementById('container-filterInfo');
 const buttonFilter = document.getElementById('button-filterInfo');
@@ -52,11 +50,10 @@ const showTopTeam = () => {
        </div>`;
   }
 };
-// Creando template para el segundo usuario 
+// mostrando segundo historia de usuario
 const showFilterRoles = (data) => {
   let templateFilter = '';
-  document.getElementById('screem-top').style = 'display:none';
-  document.getElementById('screem-filterRoles').style = 'display:block';
+  document.getElementById('screem-filterRolesAndCharacteristics').style = 'display:block';
   data.forEach((element) => {
     const cardsFilter = 
       `<div class="card-bytags">
@@ -67,17 +64,14 @@ const showFilterRoles = (data) => {
   });
   containerFilterRoles.innerHTML = templateFilter;
 };
-// click del botón estoy haciendo uso a la función filtrarRoles
 buttonFilterRoles.addEventListener('click', () => {
   const arrDataLolFilterRoles = lol.championsFilterRoles(arrDataLolTotal, selectionRoles.value);
   showFilterRoles(arrDataLolFilterRoles);
-  console.log(arrDataLolFilterRoles);
 });
-
-// mostrando tercer usuario //
+// mostrando tercer usuario 
 const showFilterInfo = () => {
-  document.getElementById('screem-filterRoles').style = 'display:none';
-  document.getElementById('screem-filterInfo').style = 'display:block';
+  document.getElementById('screem-top').style = 'display:none';
+  document.getElementById('screem-filterRolesAndCharacteristics').style = 'display:block';
   for (let i = 0; i < arrDataLolTotal.length; i++) {
     selectionOption.innerHTML += `<option value='${arrDataLolTotal[i].name}'>${arrDataLolTotal[i].name}</option>`;
   }
@@ -102,6 +96,5 @@ buttonFilter.addEventListener('click', () => {
   templateInfoOfChampions(resultFilterSelect);
 });
 
-buttonfirstUser.addEventListener('click', showTopTeam);
-buttonSecondUser.addEventListener('click', showFilterRoles);
-buttonThirdUser.addEventListener('click', showFilterInfo);
+buttonfirstUser.addEventListener('click', showTopTeam)
+buttonSecondAndThirdUser.addEventListener('click', showFilterInfo);

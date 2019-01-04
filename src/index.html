@@ -14,9 +14,8 @@
       <header>
         <nav>
           <ul>
-            <li><a href="#" id="topTeam"><i class="icon icon-dial-pad"></i> TOP 10 </a></li>
-            <li><a href="#" id="rol"><i class="icon icon-shield"></i> CAMPEONES POR ROLES</a></li>
-            <li><a href="#" id="characteristics"><i class="icon icon-v-card"></i> CARACTERISTICAS </a></li>
+            <li><a href="#" id="topTeam"><i class="icon icon-dial-pad"></i> TOP 10  </a></li>
+            <li><a href="#" id="rolAndCharacteristics"><i class="icon icon-shield"></i> FILTRAR </a></li>
             <li><a href="#" id="statistics"><i class="icon icon-area-graph"></i> ESTADISTICA </a></li>
           </ul>
         </nav>
@@ -32,16 +31,8 @@
       <section id="screem-top">
         <div id="container-topTeam"></div>
       </section>
-      <section id="screem-filterRoles">
-        <form id="filterRoles">
-          <label><input type="checkbox" name="assassin" value="Assassin"> Assassin  </label>
-          <label><input type="checkbox" name="fighter" value="Fighter"> Fighter  </label>
-          <label><input type="checkbox" name="mage" value="Mage"> Mage  </label>
-          <label><input type="checkbox" name="tank" value="Tank"> Tank  </label>
-          <label><input type="checkbox" name="support" value="Support"> Support  </label>
-          <label><input type="checkbox" name="marksman" value="Marksman"> Marksman  </label>
-        </form>
-        <select name="" id="list-roles">
+      <section id="screem-filterRolesAndCharacteristics">
+        <select id="list-roles">
           <option value="Assassin">Assassin</option>
           <option value="Fighter">Fighter</option>
           <option value="Mage">Mage</option>
@@ -51,11 +42,9 @@
         </select>
           <button id="button-filterRol"> Filtrar </button>
           <div id="container-filterRoles"></div>
-      </section>
-      <section id = "screem-filterInfo">
         <select id="selection"></select>
-        <button type="button" id="button-filterInfo"> Mostrar </button>
-        <div id="container-filterInfo"></div>
+          <button type="button" id="button-filterInfo"> Mostrar </button>
+          <div id="container-filterInfo"></div>
       </section>
     <footer> 
     </footer>
@@ -66,3 +55,4 @@
       <script src="main.js"></script>
   </body>
 </html>
+ 
