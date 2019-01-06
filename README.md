@@ -540,9 +540,9 @@ compañera:
 * [ ] UI: Permite filtrar data en base a una condición.
 
 * [Definición del producto](#Definición-del-producto)
-* [Historias de Usuario](#Historias-de-Usuario)
-* [prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
-* [prototipo de alta fidelidad](#prototipo-de-alta-fidelidad)
+* [Historias De Usuario](#Historias-De-Usuario)
+* [Prototipo de Baja Fidelidad](#Prototipo-de-Baja-Fidelidad)
+* [Prototipo de Alta Fidelidad](#Prototipo-de-Alta-Fidelidad)
 
 ***
 # Definición del producto
@@ -557,12 +557,12 @@ este proyecto se trata de crear una página amigable donde facilite al usuario q
   Según los usuarios entrevistados nos indicaron que prefieren escoger a sus campeones según sus roles ya que les ayuda saber en que posición jugarán,
   tambien les interesaba saber sus características como su ataque,defensa,dificultad y magia poque les ayudaría escoger que mejor campeón seria mas fuerte 
   que el otro una vez que haya escogido su rol.
-# Historias de Usuario
+# Historias De Usuario
  1. yo como usuario quiero quiero que me muestre los 10 primeros mejores campeones que tengan mayor rango de ataque.
  2. yo como usuario quiero que me filtre los campeones sugún el rol que elija.
  3. yo como usuario quiero que me filtre las características (ataque,defensa,dificultad y magia) de los campeones según mi elección.
  para ello hemos realizado un sketch de baja fidelidad de como quedaría y que se necesita para lograrlo.
- # prototipo de baja fidelidad
+ # Prototipo de Baja Fidelidad
  ***
  ![sin titulo](imagenes/prototibf.jpg)
  
@@ -571,7 +571,7 @@ este proyecto se trata de crear una página amigable donde facilite al usuario q
 ![sin titulo](imagenes/image2.jpg)
 
 
- ## prototipo de alta fidelidad
+ ## Prototipo de Alta Fidelidad
  ***
  * realizamos un prototipo con ayuda de FIGMA de cómo quedaría nuestro proyecto con la primera historia de usuario.
  * primer prototipo
@@ -590,6 +590,6 @@ este proyecto se trata de crear una página amigable donde facilite al usuario q
 
 * Aquí se muestra como quedaría nuestra página en un celular
 
-* ![sin titulo](imagenes/protafiphone.PNG)
+  ![sin titulo](imagenes/protafiphone.PNG)
 
-* [prototipo-en-figma](https://www.figma.com/proto/eyJVJ0RkxElf4v6qa9WanbpZ/Untitled?node-id=0%3A1&scaling=scale-down)
+  [prototipo-en-figma](https://www.figma.com/proto/eyJVJ0RkxElf4v6qa9WanbpZ/Untitled?node-id=0%3A1&scaling=scale-down)
