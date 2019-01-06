@@ -2,6 +2,7 @@
 const arrDataLolTotal = Object.values(LOL.data);
 // llamando a los id de html //
 const containerPrincipal = document.getElementById('container-listChampions');
+
 document.getElementById('screem-top').style = 'display:none';
 const buttonfirstUser = document.getElementById('topTeam');
 const containerTopTeam = document.getElementById('container-topTeam');
@@ -17,6 +18,7 @@ const buttonThirdUser = document.getElementById('characteristics');
 const selectionOption = document.getElementById('selection');
 const containerFilterInfo = document.getElementById('container-filterInfo');
 const buttonFilter = document.getElementById('button-filterInfo');
+
 // mostrando todos los campeones en la pagina principal 
 const createTemplateCard = (list) => {
   let templateCard = '';
@@ -82,15 +84,43 @@ const showFilterInfo = () => {
     selectionOption.innerHTML += `<option value='${arrDataLolTotal[i].name}'>${arrDataLolTotal[i].name}</option>`;
   }
 };
+
+/*const createTemplateCard = (list) => {
+  let templateCard = '';
+  list.forEach((dataLol) => {
+    const card = `
+    <div class='cards'>
+      <figure>
+        <img class='frontal' src="${ dataLol.splash}"/>
+        <div class='trasera'>
+          <li class='name'>${ dataLol.name}</li>
+          <hr>
+          <li class='title'> ${ dataLol.blurb}</li>
+        </div>
+      </figure>
+    </div>`;
+    templateCard += card;
+  }),
+  containerPrincipal.innerHTML = templateCard;
+};*/
+
+
+
 const templateInfoOfChampions = (data) => {
   let postCard = '';
   data.forEach((element) => {
     const cardInfo = `
-    <img class ='img4' src='${element.splash}'/>
-    <li>Ataque:${element.info.attack}</li>
+    <div class='cards'>
+     <figure>
+    <img class ='frontal' src='${element.splash}'/>
+    <div class='trasera'>
+    <li class='ataque'>Ataque:${element.info.attack}</li>
     <li>Magia:${element.info.magic}</li>
     <li>Defensa:${element.info.defense}</li>
     <li>Dificultad:${element.info.difficulty}</li>
+  </div>
+  </figure>
+  </div>
   `;
     postCard += cardInfo;
   });

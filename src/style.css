@@ -68,7 +68,7 @@ nav > ul li a:hover{
     color: rgb(179, 154, 12);
     background-color: rgb(7, 6, 6, 0.9);
 }
-#container-listChampions, #container-topTeam, #container-filterRoles{
+#container-listChampions, #container-topTeam, #container-filterRoles {
     display: flex;
     flex-wrap: Wrap;
     flex-direction: row;
@@ -205,8 +205,40 @@ figure .trasera .title{
     color: rgb(231, 161, 8);
     background-color: #aee4ee;
 }
+/* estylo css para los filtros second user */
  .list-filter {
-
+    background: rgba(230, 215, 15, 0.6);
+    padding: 10PX;
+    border: none;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 0 5px 25px  rgba(230, 215, 15, 0.6);
+    border-radius: 10px;
 }
-
+.btn-filter{
+    background: rgba(230, 215, 15, 0.6);
+    padding: 10PX;
+    border: none;
+    width: 80px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 0 5px 25px  rgba(230, 215, 15, 0.6);
+    border-radius: 10px;
+}
+/* estylo css para el tercer usuario */
+.cards-tres{
+    margin-top: 1%;
+    display: block;
+    list-style: none;
+    width: 50%;
+    padding: 1% 1% 1% 30%;
+    border-radius: 10%;
+}
+.cards-tresl:hover figure{
+    -webkit-transform: perspective(500px) rotateY(180deg);
+    -ms-transform: perspective(500px) rotateY(180deg);
+    -o-transform: perspective(500px) rotateY(180deg);
+    transform: perspective(500px) rotateY(180deg);
+}
 

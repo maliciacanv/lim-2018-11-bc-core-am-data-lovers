@@ -15,7 +15,7 @@
         <nav>
           <ul>
             <li><a href="#" id="topTeam"><i class="icon icon-dial-pad"></i> TOP 10 </a></li>
-            <li><a href="#" id="rol"><i class="icon icon-shield"></i> CAMPEONES POR ROLES</a></li>
+            <li><a href="#" id="rol"><i class="icon icon-shield"></i> FILTRAR</a></li>
             <li><a href="#" id="characteristics"><i class="icon icon-v-card"></i> CARACTERISTICAS </a></li>
             <li><a href="#" id="statistics"><i class="icon icon-area-graph"></i> ESTADISTICA </a></li>
           </ul>
@@ -24,7 +24,7 @@
       <section id="screem-principal">
         <hr><p>CAMPEONES</p><hr>
           <h2 class="text1">League of Legends es un juego competitivo en línea de ritmo frenético, 
-                aquí te mostraremos los todos los campeones existentes, donde tu podras conocer sus caracteristicas,
+                aquí te mostraremos todos los campeones existentes, donde tu podras conocer sus caracteristicas,
                 un top de los 10 mejores campeones y filtrar por sus roles.
           </h2>
         <div id ="container-listChampions"></div>  
@@ -32,6 +32,7 @@
       <section id="screem-top">
         <div id="container-topTeam"></div>
       </section>
+      
       <section id="screem-filterRoles">
         <form id="filterRoles">
           <label><input type="checkbox" name="assassin" value="Assassin"> Assassin  </label>
@@ -41,7 +42,8 @@
           <label><input type="checkbox" name="support" value="Support"> Support  </label>
           <label><input type="checkbox" name="marksman" value="Marksman"> Marksman  </label>
         </form>
-        <select name="list-filter" id="list-roles">
+        <select class="list-filter" id="list-roles">
+            <option >ROLES</option>
           <option value="Assassin">Assassin</option>
           <option value="Fighter">Fighter</option>
           <option value="Mage">Mage</option>
@@ -56,6 +58,19 @@
         <select id="selection" class="list-filter"></select>
         <button type="button" id="button-filterInfo" class="btn-filter"> Mostrar </button>
         <div id="container-filterInfo" class="container-filterinfo"></div>
+
+
+        <select class="list-filter" id="list-roles">
+            <option >ROLES</option>
+          <option value="Assassin">Assassin</option>
+          <option value="Fighter">Fighter</option>
+          <option value="Mage">Mage</option>
+          <option value="Tank">Tank</option>
+          <option value="Support">Support</option>
+          <option value="Marksman">Marksman</option>
+        </select>
+          <button id="button-filterRol" class="btn-filter"> Filtrar </button>
+          <div id="container-filterRoles" class="container-filterroles"></div>
       </section>
     <footer> 
     </footer>
