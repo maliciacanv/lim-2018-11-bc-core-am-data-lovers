@@ -22,7 +22,7 @@ const createTemplateCard = (list) => {
     const card = `
     <div class='cards'>
       <figure>
-        <img class='frontal' src="${ dataLol.splash}"/>
+       <a href='https://na.leagueoflegends.com/en/'><img class='frontal' src="${ dataLol.splash}"/></a>
         <div class='trasera'>
           <li class='name'>${ dataLol.name}</li>
           <hr>
