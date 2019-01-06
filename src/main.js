@@ -2,23 +2,19 @@
 const arrDataLolTotal = Object.values(LOL.data);
 // llamando a los id de html //
 const containerPrincipal = document.getElementById('container-listChampions');
-
 document.getElementById('screem-top').style = 'display:none';
 const buttonfirstUser = document.getElementById('topTeam');
 const containerTopTeam = document.getElementById('container-topTeam');
 
-document.getElementById('screem-filterRoles').style = 'display:none';
-const buttonSecondUser = document.getElementById('rol');
+document.getElementById('screem-filterRolesAndCharacteristics').style = 'display:none';
+const buttonSecondAndThirdUser = document.getElementById('rolAndCharacteristics');
 const selectionRoles = document.getElementById('list-roles');
 const buttonFilterRoles = document.getElementById('button-filterRol');
 const containerFilterRoles = document.getElementById('container-filterRoles');
 
-document.getElementById('screem-filterInfo').style = 'display:none';
-const buttonThirdUser = document.getElementById('characteristics');
 const selectionOption = document.getElementById('selection');
 const containerFilterInfo = document.getElementById('container-filterInfo');
 const buttonFilter = document.getElementById('button-filterInfo');
-
 // mostrando todos los campeones en la pagina principal 
 const createTemplateCard = (list) => {
   let templateCard = '';
@@ -26,7 +22,7 @@ const createTemplateCard = (list) => {
     const card = `
     <div class='cards'>
       <figure>
-        <img class='frontal' src="${ dataLol.splash}"/>
+       <a href='https://na.leagueoflegends.com/en/'><img class='frontal' src="${ dataLol.splash}"/></a>
         <div class='trasera'>
           <li class='name'>${ dataLol.name}</li>
           <hr>
@@ -54,11 +50,10 @@ const showTopTeam = () => {
        </div>`;
   }
 };
-// Creando template para el segundo usuario 
+// mostrando segunda historia de usuario
 const showFilterRoles = (data) => {
   let templateFilter = '';
-  document.getElementById('screem-top').style = 'display:none';
-  document.getElementById('screem-filterRoles').style = 'display:block';
+  document.getElementById('screem-filterRolesAndCharacteristics').style = 'display:block';
   data.forEach((element) => {
     const cardsFilter = 
       `<div class="card-bytags">
@@ -69,58 +64,33 @@ const showFilterRoles = (data) => {
   });
   containerFilterRoles.innerHTML = templateFilter;
 };
-// click del botón estoy haciendo uso a la función filtrarRoles
 buttonFilterRoles.addEventListener('click', () => {
   const arrDataLolFilterRoles = lol.championsFilterRoles(arrDataLolTotal, selectionRoles.value);
   showFilterRoles(arrDataLolFilterRoles);
-  console.log(arrDataLolFilterRoles);
 });
-
-// mostrando tercer usuario //
+// mostrando tercer usuario 
 const showFilterInfo = () => {
-  document.getElementById('screem-filterRoles').style = 'display:none';
-  document.getElementById('screem-filterInfo').style = 'display:block';
+  document.getElementById('screem-top').style = 'display:none';
+  document.getElementById('screem-filterRolesAndCharacteristics').style = 'display:block';
   for (let i = 0; i < arrDataLolTotal.length; i++) {
     selectionOption.innerHTML += `<option value='${arrDataLolTotal[i].name}'>${arrDataLolTotal[i].name}</option>`;
   }
 };
-
-/*const createTemplateCard = (list) => {
-  let templateCard = '';
-  list.forEach((dataLol) => {
-    const card = `
-    <div class='cards'>
-      <figure>
-        <img class='frontal' src="${ dataLol.splash}"/>
-        <div class='trasera'>
-          <li class='name'>${ dataLol.name}</li>
-          <hr>
-          <li class='title'> ${ dataLol.blurb}</li>
-        </div>
-      </figure>
-    </div>`;
-    templateCard += card;
-  }),
-  containerPrincipal.innerHTML = templateCard;
-};*/
-
-
-
 const templateInfoOfChampions = (data) => {
   let postCard = '';
   data.forEach((element) => {
-    const cardInfo = `
-    <div class='cards'>
-     <figure>
-    <img class ='frontal' src='${element.splash}'/>
-    <div class='trasera'>
+    const cardInfo = `  <div class='cards2'>
+    <figure>
+    <img class ='img4' src='${element.splash}'/>
+    <div class='trasera2'>
+    <li class='info'>INFORMACIÓN DE TU CAMPEÓN</li>
     <li class='ataque'>Ataque:${element.info.attack}</li>
-    <li>Magia:${element.info.magic}</li>
-    <li>Defensa:${element.info.defense}</li>
-    <li>Dificultad:${element.info.difficulty}</li>
-  </div>
-  </figure>
-  </div>
+    <li class ='magia'>Magia:${element.info.magic}</li>
+    <li class='defensa'>Defensa:${element.info.defense}</li>
+    <li class='dificultad'>Dificultad:${element.info.difficulty}</li>
+    </div>
+    </figure>
+    </div>
   `;
     postCard += cardInfo;
   });
@@ -132,6 +102,5 @@ buttonFilter.addEventListener('click', () => {
   templateInfoOfChampions(resultFilterSelect);
 });
 
-buttonfirstUser.addEventListener('click', showTopTeam);
-buttonSecondUser.addEventListener('click', showFilterRoles);
-buttonThirdUser.addEventListener('click', showFilterInfo);
+buttonfirstUser.addEventListener('click', showTopTeam)
+buttonSecondAndThirdUser.addEventListener('click', showFilterInfo);
