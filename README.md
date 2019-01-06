@@ -39,7 +39,7 @@ este proyecto se trata de crear una página amigable donde facilite al usuario q
   
  ![sin titulo](imagenes/Captura.PNG)
  
- * segundo prototipo después de testear con un usario 
+ * segundo prototipo después de testear con un usuario 
  
  * ![sin titulo](imagenes/prototipoaf1.PNG)
 
