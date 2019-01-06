@@ -50,7 +50,7 @@ const showTopTeam = () => {
        </div>`;
   }
 };
-// mostrando segundo historia de usuario
+// mostrando segunda historia de usuario
 const showFilterRoles = (data) => {
   let templateFilter = '';
   document.getElementById('screem-filterRolesAndCharacteristics').style = 'display:block';
@@ -79,12 +79,18 @@ const showFilterInfo = () => {
 const templateInfoOfChampions = (data) => {
   let postCard = '';
   data.forEach((element) => {
-    const cardInfo = `
+    const cardInfo = `  <div class='cards2'>
+    <figure>
     <img class ='img4' src='${element.splash}'/>
-    <li>Ataque:${element.info.attack}</li>
-    <li>Magia:${element.info.magic}</li>
-    <li>Defensa:${element.info.defense}</li>
-    <li>Dificultad:${element.info.difficulty}</li>
+    <div class='trasera2'>
+    <li class='info'>INFORMACIÓN DE TU CAMPEÓN</li>
+    <li class='ataque'>Ataque:${element.info.attack}</li>
+    <li class ='magia'>Magia:${element.info.magic}</li>
+    <li class='defensa'>Defensa:${element.info.defense}</li>
+    <li class='dificultad'>Dificultad:${element.info.difficulty}</li>
+    </div>
+    </figure>
+    </div>
   `;
     postCard += cardInfo;
   });

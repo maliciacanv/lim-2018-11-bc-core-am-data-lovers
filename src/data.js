@@ -27,9 +27,9 @@ const filterInfoChampions = (data, tipo) => {
   return filterData;
 };
 
-const statFunction = (num, arrKeys) => {
+/*const statFunction = (num, arrKeys) => {
   return (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * num)).toFixed(2);
-};
+};*/
 
 window.lol = {
   championsTopTeam,
