@@ -575,21 +575,21 @@ este proyecto se trata de crear una página amigable donde facilite al usuario q
  ***
  * realizamos un prototipo con ayuda de FIGMA de cómo quedaría nuestro proyecto con la primera historia de usuario.
  * primer prototipo
- * 
+  
  ![sin titulo](imagenes/Captura.PNG)
- * 
- segundo prototipo después de testear con un usario 
- * 
- ![sin titulo](imagenes/prototipoaf1.PNG)
- *  
- Aquí se muestra como quedaría nuestra página en desktop
- * 
+ 
+ * segundo prototipo después de testear con un usario 
+ 
+ * ![sin titulo](imagenes/prototipoaf1.PNG)
+
+ * Aquí se muestra como quedaría nuestra página en desktop
+ 
  [prototipo-en-zeplin](https://app.zeplin.io/project/5c312ecbbae2c22086d6bdbb)
- * 
+ 
  [prototipo-en-figma](https://www.figma.com/proto/FhGoRtLdYJ8nH1sfVmZoTTRs/Untitled?node-id=3%3A22&scaling=min-zoom)
-* 
-Aquí se muestra como quedaría nuestra página en un celular
-* 
-![sin titulo](imagenes/protafiphone.PNG)
-* 
-[prototipo-en-figma](https://www.figma.com/proto/eyJVJ0RkxElf4v6qa9WanbpZ/Untitled?node-id=0%3A1&scaling=scale-down)
+
+* Aquí se muestra como quedaría nuestra página en un celular
+
+* ![sin titulo](imagenes/protafiphone.PNG)
+
+* [prototipo-en-figma](https://www.figma.com/proto/eyJVJ0RkxElf4v6qa9WanbpZ/Untitled?node-id=0%3A1&scaling=scale-down)
