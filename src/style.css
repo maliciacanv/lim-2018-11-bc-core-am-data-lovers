@@ -285,3 +285,15 @@ figure .trasera2{
     display: flex;
 
 }
+
+table{
+    background-color: antiquewhite;
+}
+h2,h4{
+    color: antiquewhite;
+}
+.container-stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

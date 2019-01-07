@@ -40,7 +40,7 @@ const createTemplateCard = (list) => {
     </div>`;
     templateCard += card;
   }),
-  containerPrincipal.innerHTML = templateCard;
+    containerPrincipal.innerHTML = templateCard;
 };
 createTemplateCard(arrDataLolTotal);
 
@@ -112,15 +112,20 @@ buttonFilter.addEventListener('click', () => {
   templateInfoOfChampions(resultFilterSelect);
 });
 
-
+const statsClick = () => {
+  document.getElementById('screen-filter').style = 'display:none';
+  document.getElementById('screen-stats').style = 'display:block';
+};
 
 const createStats = (data) => {
   let statsChampions = '';
-  document.getElementById('screen-filter').style = 'display:none';
   data.forEach((array) => {
     let cards3 = `
-     <h1> <img src="${ array.img}"/>${array.name}</h1>
-     <p>${ array.tags}</p>
+    <div class="stats">
+     <h1> <img class="imgStats" src="${ array.img}"/>
+     <h2>${array.name}</h2>
+     <h4>${ array.tags}</h4>
+     </div>
      <table>
        <tr>
          <th> Stats </th>
@@ -153,7 +158,9 @@ const createStats = (data) => {
   containerStats.innerHTML = statsChampions;
 };
 createStats(arrDataLolTotal);
+
+
 buttonfirstUser.addEventListener('click', showTopTeam);
 buttonSecondAndThirdUser.addEventListener('click', showFilterInfo);
-buttonStats.addEventListener('click', createStats);
+buttonStats.addEventListener('click', statsClick);
 
