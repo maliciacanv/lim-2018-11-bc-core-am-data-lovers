@@ -27,12 +27,19 @@ const filterInfoChampions = (data, tipo) => {
   return filterData;
 };
 
-/*const statFunction = (num, arrKeys) => {
-  return (parseFloat(arrKeys.stats.hp) + (parseFloat(arrKeys.stats.hpperlevel) * num)).toFixed(2);
-};*/
+
+const statOfChampions = (num, array, stats) => {
+  switch (stats) {
+  case 1:
+    return (parseFloat(array.stats.hp) + (parseFloat(array.stats.hpperlevel) * num)).toFixed(2);
+  case 2:
+    return (parseFloat(array.stats.armor) + (parseFloat(array.stats.armorperlevel) * num)).toFixed(2);
+  }
+};
 
 window.lol = {
   championsTopTeam,
   championsFilterRoles,
   filterInfoChampions,
+  statOfChampions,
 };

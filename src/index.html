@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'> 
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <video src="tristana-2018-webm.webm" autoplay loop></video>
+    <video src="atrox-2018.webm" autoplay loop></video>
     <div id="root"> 
       <img id= "imagen1" src="https://cdn.atomix.vg/wp-content/uploads/2013/08/LOL.png">
       <header>
@@ -16,23 +16,26 @@
           <ul>
             <li><a href="#" id="topTeam"><i class="icon icon-dial-pad"></i> TOP 10  </a></li>
             <li><a href="#" id="rolAndCharacteristics"><i class="icon icon-shield"></i> FILTRAR </a></li>
-            <li><a href="#" id="statistics"><i class="icon icon-area-graph"></i> ESTADISTICA </a></li>
+            <li><a href="#" id="stats"><i class="icon icon-area-graph"></i> ESTADISTICA </a></li>
           </ul>
         </nav>
       </header> 
-      <section id="screem-principal">
+      <section id="screen-principal">
         <p>CAMPEONES</p><hr>
           <h2 class="text1">League of Legends es un juego competitivo en línea de ritmo frenético, 
-                aquí te mostraremos los todos los campeones existentes, donde tu podras conocer sus caracteristicas,
-                un top de los 10 mejores campeones y filtrar por sus roles.
+                aquí te mostraremos todos los campeones, 
+                donde podras observas el top de los 10 mejores campeones según su ataque de rango 
+                y filtrar sus por sus roles y nombres de los campeones.
           </h2>
         <div id ="container-listChampions"></div>  
       </section>
-      <section id="screem-top">
+      <section id="screen-top">
+        <p>10 mejores campeones</p>
         <div id="container-topTeam"></div>
       </section>
-      <div class="contenedor-second-third-user">
-            <select id="list-roles"class="element element1" >
+      <section id="screen-filter">
+        <div class="rol">
+            <select id="list-roles"class="element1" >
               <option value="Assassin">Assassin</option>
               <option value="Fighter">Fighter</option>
               <option value="Mage">Mage</option>
@@ -40,19 +43,27 @@
               <option value="Support">Support</option>
               <option value="Marksman">Marksman</option>
             </select>
-    
-         <div> <button id="button-filterRol" class="element element2"> Filtrar </button></div>  
-         <div><select id="selection" class="element element3"></select> </div>  
-         <div><button type="button" id="button-filterInfo" class="element element4"> Mostrar </button></div>
-      </div>
-        <section id="screem-filterRolesAndCharacteristics"></section>
+          <div> <button type="button" id="button-filterRol" class="element3"> Filtrar </button></div> 
+          </div>
+          <div class="info"> 
+          <select id="selection" class="element2"></select> 
+          <div><button type="button" id="button-filterInfo" class="element4"> Filtrar </button></div>
+          </div>
           <div id="container-filterRoles" class="ontainer-filterRoles"></div>
           <div id="container-filterInfo" class="container-filterInfo"></div>
       </section>
-    <footer> 
-    </footer>
+      <section id="screen-stats">
+        <div id="container-stats"></div>
+      </section>
+    <footer>
+      <nav> 
+        <a href="https://lan.leagueoflegends.com/es/tag/facebook" target="_blanck" class="icon icon-facebook"></a>
+        <a href="https://twitter.com/leagueoflegends?lang=es" target="_blanck" class="icon icon-twitter "></a>
+        <a href="https://www.instagram.com/leagueoflegends/?hl=es-la" target="_blanck" class="icon icon-instagram"></a>
+        <a href="https://www.youtube.com/channel/UC2t5bjwHdUX4vM2g8TRDq5g" target="_blanck" class="icon icon-youtube"></a>
+    </nav>
+          </footer>
     </div>
-    
       <script src="./data/lol/lol.js"></script>
       <script src="data.js"></script>
       <script src="main.js"></script>
