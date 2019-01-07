@@ -25,23 +25,42 @@ este proyecto se trata de crear una página amigable donde facilite al usuario q
  para ello hemos realizado un sketch de baja fidelidad de como quedaría y que se necesita para lograrlo.
  # Prototipo de Baja Fidelidad
  ***
- ![sin titulo](imagenes/prototibf.jpg)
+ * pantalla principal
  
- Empezamos con la primera historia de usuario
-***
-![sin titulo](imagenes/image2.jpg)
+ me muestra la lista de los campeones de manera ordenada alfabeticamente
+ ![sin titulo](imagenes/primerapant.jpg)
+ 
+ * primera historia de usuario
+ al hacer click en el top 10 me muestra los 10 mejores campeones según su ataque de manera descendente.
+ ![sin titulo](imagenes/primerahistoria.jpg)
 
+ * segunda historia de usuario
+ al hacer click en el botón filtrar me muestra dos botones,si hago click en el lado izquierdo me mostrará una lista de roles y al escoger uno de los roles me filtrará  todos los campeones que sean de ese rol  .
+ ![sin titulo](imagenes/segundahistoria.jpg)
 
+ * tercera historia de usuario
+ al hacer click en el botón derecho me mostrará una lista de todos los nombres de los campeones y al escoger uno,aparecerá su imagen y a la espalda su información.
+ 
+ ![sin titulo](imagenes/tercerahistoria.jpg)
+
+ * cuarta historia de usuario
+ al hacer click en estadística me mostrará una lista de los campeones con su hp y armadura me indica cuanto tendrían si pasaran para cada nivel.
+ 
+ ![sin titulo](imagenes/cuartahistoria.jpg)
+
+ 
  ## Prototipo de Alta Fidelidad
  ***
- * realizamos un prototipo con ayuda de FIGMA de cómo quedaría nuestro proyecto con la primera historia de usuario.
+ * realizamos un prototipo con ayuda de FIGMA de cómo quedaría nuestro proyecto 
+ 
  * primer prototipo
   
  ![sin titulo](imagenes/Captura.PNG)
  
  * segundo prototipo después de testear con un usuario 
+ E l usuario nos indicaba que los botones principales vayan de manera lineal,porque al momento de mostrar las imagenes de los campeones no se visualizaba bien con la posición anterior.
  
- * ![sin titulo](imagenes/prototipoaf1.PNG)
+  ![sin titulo](imagenes/prototipoaf1.PNG)
 
  * Aquí se muestra como quedaría nuestra página en desktop
  
