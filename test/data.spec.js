@@ -251,6 +251,22 @@ const outputThree = [
   }
 ];
 
+const inputFour = [
+  {
+    name: 'Aatrox',
+    tags: ['Fighter', 'Tank'],
+    img: 'https://www.masterypoints.com/assets/img/lol/champion_icons/Aatrox.png',
+    stats: {
+      hp: 537.8,
+      hpperlevel: 85,
+      armor: 24.384,
+      armorperlevel: 3.8,
+    }
+  },
+];
+
+const outputFour = 962.8;
+
 describe('lol', () => {
   it('deberia ser un objeto', () => {
     expect(typeof lol).toBe('object');
@@ -275,6 +291,14 @@ describe('lol', () => {
         });
         it('deberia retornar un array del campeon filtrado por nombre', () => {
           expect(lol.filterInfoChampions(inputThree, 'Ashe')).not.toEqual(outputThree);
+        });
+        describe('lol.statOfChampions', () => {
+          it('deberia ser una funcion', () => {
+            expect(typeof lol.statOfChampions).toBe('function');
+          });
+          it('deberia retornar un array con el resultado de la suma y multiplicación de nivel de vida del nivel 5 con dos decimales', () => {
+            expect(lol.statOfChampions(parseFloat(5, inputFour))).not.toEqual(outputFour);
+          });
         });
       });
     });

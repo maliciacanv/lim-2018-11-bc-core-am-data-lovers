@@ -40,7 +40,7 @@ const createTemplateCard = (list) => {
     </div>`;
     templateCard += card;
   }),
-    containerPrincipal.innerHTML = templateCard;
+  containerPrincipal.innerHTML = templateCard;
 };
 createTemplateCard(arrDataLolTotal);
 
@@ -121,44 +121,37 @@ buttonFilter.addEventListener('click', () => {
 const statsClick = () => {
   document.getElementById('screen-filter').style = 'display:none';
   document.getElementById('screen-stats').style = 'display:block';
+  createStats(arrDataLolTotal);
 };
-
 const createStats = (data) => {
   let statsChampions = '';
   data.forEach((array) => {
     let cards3 = `
-    <div class="stats">
-     <h1> <img class="imgStats" src="${ array.img}"/>
-     <h2>${array.name}</h2>
-     <h4>${ array.tags}</h4>
-     </div>
-     <table>
-       <tr>
-         <th> Stats </th>
-         <th> Per Level </th>
-         <th> Level. 1 </th>
-         <th> Level. 6 </th>
-         <th> Level. 12 </th>
-         <th> Level. 18 </th>
-       </tr>
-       <tr>
-         <td>${ newArrayKeys[0]}</td>
-         <td>${ array.stats.hpperlevel}</td>
-         <td>${ array.stats.hp}</td>
-         <td>${window.lol.statOfChampions(6, array, 1)}</td>
-         <td>${window.lol.statOfChampions(12, array, 1)}</td>
-         <td>${window.lol.statOfChampions(18, array, 1)}</td>
-       </tr>
-       <tr>
-         <td>${ newArrayKeys[2]}</td>
-         <td>${ array.stats.armorperlevel}</td>
-         <td>${ array.stats.armor}</td>
-         <td>${window.lol.statOfChampions(6, array, 2)}</td>
-         <td>${window.lol.statOfChampions(12, array, 2)}</td>
-         <td>${window.lol.statOfChampions(18, array, 2)}</td>
-       </tr>
-     </table>
-   </div>`;
+          <div class="stats">
+            <h2>${array.name}</h2>
+            <img class="imgStats" src="${ array.img}"/>
+            <h4>${ array.tags}</h4>
+          <table>
+            <tr>
+            <th> Stats </th>
+            <th> Per Level </th>
+            <th> Level. 1 </th>
+            <th> Level. 5 </th>
+            <th> Level. 10 </th>
+            <th> Level. 15 </th>
+            <th> Level. 18 </th>            
+            </tr>
+            <tr>
+            <td>${ newArrayKeys[0]}</td>
+            <td>${ array.stats.hpperlevel}</td>
+            <td>${ array.stats.hp}</td>
+            <td>${window.lol.statOfChampions(5, array)}</td>
+            <td>${window.lol.statOfChampions(10, array)}</td>
+            <td>${window.lol.statOfChampions(15, array)}</td>
+            <td>${window.lol.statOfChampions(18, array)}</td>
+            </tr>
+          </table>
+        </div>`;
     statsChampions += cards3;
   });
   containerStats.innerHTML = statsChampions;

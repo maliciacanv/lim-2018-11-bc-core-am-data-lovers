@@ -1,12 +1,12 @@
 const championsTopTeam = (arr) => {
   const newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    newArray.push({ name: arr[i].name, title: arr[i].title, splash: arr[i].splash, attackrange: arr[i].stats.attackrange});
+    newArray.push({ name: arr[i].name, title: arr[i].title, splash: arr[i].splash, attackrange: arr[i].stats.attackrange });
   }
   const newArrayOrder = newArray.sort((higher, less) => {
     if (higher.attackrange < less.attackrange) {
       return 1;
-    } else { 
+    } else {
       return -1;
     }
   });
@@ -28,15 +28,9 @@ const filterInfoChampions = (data, tipo) => {
 };
 
 
-const statOfChampions = (num, array, stats) => {
-  switch (stats) {
-  case 1:
-    return (parseFloat(array.stats.hp) + (parseFloat(array.stats.hpperlevel) * num)).toFixed(2);
-  case 2:
-    return (parseFloat(array.stats.armor) + (parseFloat(array.stats.armorperlevel) * num)).toFixed(2);
-  }
+const statOfChampions = (num, array) => {
+  return (parseFloat(array.stats.hp) + (parseFloat(array.stats.hpperlevel) * num));
 };
-
 window.lol = {
   championsTopTeam,
   championsFilterRoles,

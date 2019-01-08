@@ -1,142 +1,137 @@
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
- 
-* {
-    margin: 0;
+@import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree');
+
+*{
+    margin:0;
     padding: 0;
-    box-sizing: border-box;
 }
-body{
-    margin: 0;
-}
-
 video{
- position:fixed;
-  min-width:100%;
- min-height:100%;
- top: 50%;
- left: 50%;
- transform: translateX(-50%) translateY(-50%);
- z-index: -1;
+    position:fixed;
+     min-width:100%;
+    min-height:100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+   }
+body{
+
 }
 
-#root{
-    margin-right: 5%;
-    margin-left: 5%;
-}
-footer{
-    text-align: center;
-}
-
-#imagen1{
-    width: 30%;
-    margin-left: 40%;
-    margin-top: 8%; 
+.header{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    right: 0;
+    z-index: 1000;
+    background:black;
+
     
 }
-
-header{
-    width: 100%; 
-    height: 200px;
-    margin-top: 20%; 
+footer{
+    background: #000;
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+}
+.wrapper{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
 }
 #screen-principal{
-    margin-top: 70%;
+padding-top: 200px;
+    
 }
-
+header .logo{
+    float: left;
+    width: 30%;
+    width: 30%;
+    display: flex;
+    margin-left: 30%;
+}
 
 nav{
-    margin: 20px auto;
+    
     width: 90%;
     max-width: 1000px;
+    justify-content: center;
 }
-
 nav > ul{ 
     list-style: none;    
-}
-
+    }
 nav > ul {
     display:table;
     overflow: hidden;
     width: 100%;
     position: relative;
-    background-color: rgba(5, 5, 5, 0.9);
-}
+    background-color: rgba(5, 5, 5, 1.0);
 
+}
 nav > ul li {
     display: table-cell;
-   
 }
-
 nav > ul li a{
     color: rgb(179, 154, 12);
     display: block;
     line-height: 20px;
+    font-size: 25px;
     padding: 20px;
     position: relative;
     text-align: center;
     text-decoration: none;
     font-family: 'Architects Daughter', cursive;
-
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border-radius:50px;
 }
-
 nav > ul li a:hover{
     color: rgb(250, 249, 249);
-    background-color: rgba(36, 35, 35, 0.9);
+    background-color: rgba(31, 27, 27, 0.959);
+    
 }
 
-#container-listChampions, #container-topTeam, #container-filterRoles{
+#container-listChampions, #container-topTeam, #container-filterRoles, #container-stats{
     display: flex;
     flex-wrap: Wrap;
     flex-direction: row;
     justify-content: center;
     list-style: none;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-right: 10%;
     margin-left: 10%;
 }
 
-#container-listChampions{
-    margin-left: 0%;
-    margin-top: 3%;
+#container-listChampions, #container-topTeam, #container-filterRoles{
+    background: rgb(12, 12, 12);
+    outline-style: ridge;
+    outline-color: #ffde44;
 }
-
 #container-filterInfo{
     margin-left: 32%;
     margin-top: 3%;
 }
-
 p{
-    margin-top: -20%;
-    color: bisque;
-    text-align: center;
+    color: #f2bc00;
     font-size: 20pt;
-    font-family: 'Josefin Sans', sans-serif;
-    
+    font-family: 'Happy Monkey', cursive;
+    margin-left: 5%;
+    margin-right: 5%;
 
 }
-
-section hr{
-    margin-top:2%;
-    height: 1px;
-    background: #eeb10ae3;
-    width: 100%;
-}
-
 .text1{
     font-size: 15pt;
-    color: bisque;
+    color: beige;
     text-align: center;
     margin-top: 2%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Architects Daughter', cursive;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .cards, .card-link, .card-bytags{
@@ -150,6 +145,17 @@ section hr{
 .cards2{
     width: 50%;
     border-radius: 5%;
+}
+
+.stats{
+    border: #f2bc00 solid 1px;
+    margin-top: 2%;
+    width: 50%;
+    text-align: center;
+    background: beige;
+}
+.stats:hover{
+    background: #ffde44
 }
 
 .cards:hover figure{
@@ -195,6 +201,13 @@ figure .frontal, figure .frontal2, figure .trasera, figure .trasera2, figure .fr
     width: 100%;
     border-radius: 5px;
     transition: all ease .5s;
+    border: 1px solid #ffde44;
+}
+
+figure .frontalTop, figure .traseraTop{
+    border: 1px solid bisque;
+    outline-style: ridge;
+    border-radius: 0px;
 }
 
 figure .frontal, figure .frontal2, figure .frontalTop, figure .frontal3{
@@ -210,26 +223,26 @@ figure .trasera, figure .trasera2, figure .traseraTop, figure .trasera3{
     transform: perspective(500px) rotateY(180deg);
     backface-visibility: hidden;
     overflow: auto;
-    background: #080808;
+    background: beige;
 }
 figure .traseraTop{
     background: #ffe642;
 }
 figure .trasera .name{
-    color:beige;
+    color:rgb(5, 5, 5);
     font-family: 'Courier New', Courier, monospace;
     font-size: 20pt;
     text-align: center;
 }
 
 figure .trasera hr{
-    height: 5px;
-    background: #f7b603e3;
-    margin-bottom: 15px;
+    height: 2px;
+    background: #ffd700;
+    margin-bottom: 2%;
 }
 
 figure .trasera .title{
-    color:beige;
+    color:rgb(3, 3, 3);
     font-family: 'Josefin Sans', sans-serif;   
     font-size: 8pt;
     text-align: center;
@@ -273,35 +286,27 @@ figure .trasera3{
     border-radius: 5%;
 }
 .element1, .element2{
-    background-color: rgb(255, 215, 0, 0.9); 
-    border: none;
+    background-color: rgb(252, 252, 248);
     color: rgb(8, 8, 8);
-    padding: 0% 0%;
     text-align: center;
-    text-decoration: none;
     font-size: 20px;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    cursor: pointer;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 .element1:hover{
-    background-color: #1b3138;
-    color:beige;
+    background-color: #ffde40;
+    color:rgb(5, 5, 5);
 }
 .element2:hover{
-    background-color: #1b3138;
-    color:beige;
+    background-color: #ffde40;
+    color:rgb(3, 3, 3);
 }
 
 .element3, .element4 {
     background-color: rgb(32, 37, 32); /* Green */
-    border: none;
     color: white;
     padding: 16px 16px;
     text-align: center;
-    text-decoration: none;
     font-size: 16px;
     margin: 4px 2px;
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -332,49 +337,74 @@ figure .trasera3{
   
 }
 
-.rol{
-    margin-top: 5%;
+.rol{ 
+    margin-top: 1%;
     display: flex;
     margin-left:20%;
 }
 
-.info{
+.info{ 
     margin-left: 60%;
-    margin-top: -5%;
+    margin-top: -6%;
     display: flex;
 
 }
 
-table{
-    background-color: antiquewhite;
-}
+ table {
+    width: 100%;
+    border: 1px solid #000;
+    background: #ffde40
+ }
+ table:hover{
+     background: beige;
+ }
+
+ th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-spacing: 0;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+ }
+
 h2,h4{
-    color: antiquewhite;
+    color: rgb(5, 5, 5);
 }
-.container-stats{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
- /*.icon{
-        width: 5%;
-        height: 35px;
-    }*/
+
+.iconf{ 
+    padding: 1% 1% 1% 1%;
 }
-@media only screen and (max-width: 600px){
-    
-    .cards{
-        display:flex;
-       flex-flow: row wrap;
-        width: 350px;
-        height: 200px;
-        
+@media screen and (max-width:420px){
+    header .logo, header nav{
+        width: 100%;
+       line-height: 100px;
     }
-    
-    
-    figure .frontal{
-        width: 250px;
-        height: 200px;
-               
+    header .logo{
+        margin-left: 35%;
+        width: 40%;
+    width: 40%;
     }
-    
-}  
+    #container-listChampions, #container-topTeam, #container-filterRoles, #container-stats {
+        display: flex;
+        flex-wrap: Wrap;
+        justify-content: center;
+    }
+    .cards, .card-link, .card-bytags {
+width: 90%;
+    }
+}
+@media screen and (max-height:1000px){
+    footer{
+        top: 0;
+         left: 0;
+         right: 0;
+         z-index: 1000;
+         justify-content: center;
+         display: flex;
+         justify-content: flex-end;
+         margin-top: 1%;
+         }
+}
