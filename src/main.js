@@ -52,10 +52,14 @@ const showTopTeam = () => {
   for (let i = 0; i < arrDataLolTopTeam.length; i++) {
     containerTopTeam.innerHTML +=
       `<div class="card-link">
-              <img class="post-image" src="${arrDataLolTopTeam[i].splash}"/>
+              <figure>
+              <img class="frontalTop" src="${arrDataLolTopTeam[i].splash}"/>
+              <div class="traseraTop">
+              <li class="post-attackrange">Attackrange: ${arrDataLolTopTeam[i].attackrange}</li><hr>
               <li class="post-names">${arrDataLolTopTeam[i].name}</li>
               <li class="post-title"> ${arrDataLolTopTeam[i].title}</li>
-              <li class="post-attackrange">Attackrange: ${arrDataLolTopTeam[i].attackrange}</li>
+              </div>
+              </figure>
        </div>`;
   }
 };
@@ -64,10 +68,12 @@ const showFilterRoles = (data) => {
   let templateFilter = '';
   document.getElementById('screen-filter').style = 'display:block';
   data.forEach((element) => {
-    const cardsFilter =
-      `<div class="card-bytags">
-      <img class="post-image" src="${element.splash}"/>
-      <li class="post-name">${element.name}</li>      
+    const cardsFilter = `
+    <div class="card-bytags">
+    <figure>
+      <img class="frontal3" src="${element.splash}"/>
+      <li class="trasera3">${element.name}</li>    
+    </figure>  
     </div>`;
     templateFilter += cardsFilter;
   });
