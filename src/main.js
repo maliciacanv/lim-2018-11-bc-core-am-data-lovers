@@ -27,7 +27,7 @@ const createTemplateCard = (list) => {
   list.forEach((dataLol) => {
     const card = `
     <div class='cards'>
-    <a href='https://na.leagueoflegends.com/en/' target='_blanck'>
+    
       <figure>
        <img class='frontal' src="${ dataLol.splash}"/>
         <div class='trasera'>
