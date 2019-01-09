@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <video src="animated-aprilfools-2014.webm" autoplay loop></video>
+    <video src="" autoplay loop></video>
     <div id="root"> 
       <img id= "imagen1" src="https://cdn.atomix.vg/wp-content/uploads/2013/08/LOL.png">
       <header>
@@ -21,13 +21,8 @@
         </nav>
       </header> 
       <section id="screen-principal">
-
         <p>¡BIENVENIDO A LA LIGA DE LEYENDAS!</p>
-          <h2 class="text1">League of Legends es un juego competitivo en línea de ritmo frenético, 
-                aquí te mostraremos todos los campeones, 
-                donde podras observas el top de los 10 mejores campeones según su ataque de rango 
-                y filtrar por sus roles y nombres de los campeones.
-          </h2>
+   </select>
         <div id ="container-listChampions"></div>  
       </section>
       <section id="screen-top">
@@ -35,7 +30,7 @@
       </section>
       <section id="screen-filter">
         <div class="rol">
-          <select id="list-roles" class="element1">
+          <select id="list-roles" class="element1" onchange="showFilterRoles()">
             <option value="Assassin">Assassin</option>
             <option value="Fighter">Fighter</option>
             <option value="Mage">Mage</option>

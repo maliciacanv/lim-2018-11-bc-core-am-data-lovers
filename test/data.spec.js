@@ -262,9 +262,8 @@ const inputFour = [
       armor: 24.384,
       armorperlevel: 3.8,
     }
-  },
+  }
 ];
-
 const outputFour = 962.8;
 
 describe('lol', () => {
