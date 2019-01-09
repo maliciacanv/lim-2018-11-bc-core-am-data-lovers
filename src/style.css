@@ -3,102 +3,132 @@
 @import url('https://fonts.googleapis.com/css?family=Happy+Monkey');
 @import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree');
 
-body{
-    margin: 0;    
-}
-
-video{
- position: fixed;
-  min-width:100%;
- min-height:100%;
- top: 50%;
- left: 50%;
- transform: translateX(-50%) translateY(-50%);
- z-index: -1;
-}
-
-#root{
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
 *{
-    padding: 0%;
-    margin:0%;
+    margin:0;
+    padding: 0;
 }
-footer{    
-    text-align: center;
-    position: static;
-}
-#imagen1{
-    width: 20%;
-    margin-left: 40%;  
+video{
+    position:fixed;
+     min-width:100%;
+    min-height:100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+   }
+body{
+
 }
 
-header{
-    width: 100%; 
-    margin-top: -2%;   
+.header{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background:black;
+    
+}
+footer{
+    background: #000;
+    position: fixed;
+}
+.wrapper{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+#screen-principal,#screen-top{
+padding-top: 200px;   
+}
+#screen-filter,#screen-stats{
+    padding-top: 250px;   
+}
+#filters{
+    background: #544a7d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #544a7d, #ffd452); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #544a7d, #ffd452);
+    display: flex;
+    flex-wrap: wrap wrap-reverse;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 20px 0px 20px;
+position: fixed;
+left: 0;
+top:0;
+right: 0;
+z-index: 1000;
+margin-top: 190px;
+}
+header .logo{
+    float: left;
+    width: 30%;
+    width: 30%;
+    display: flex;
+    margin-left: 30%;
 }
 
 nav{
-    margin: 20px auto;
+    
     width: 90%;
     max-width: 1000px;
+    justify-content: center;
 }
-
 nav > ul{ 
     list-style: none;    
-}
-
+    }
 nav > ul {
     display:table;
     overflow: hidden;
     width: 100%;
     position: relative;
-    background-color: rgba(5, 5, 5);
-}
+    background-color: rgba(5, 5, 5, 1.0);
 
+}
 nav > ul li {
     display: table-cell;
 }
-
 nav > ul li a{
-    color: #f2bc00;
+    color: rgb(179, 154, 12);
     display: block;
     line-height: 20px;
+    font-size: 25px;
     padding: 20px;
     position: relative;
     text-align: center;
     text-decoration: none;
     font-family: 'Architects Daughter', cursive;
-
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border-radius:50px;
 }
-
 nav > ul li a:hover{
     color: rgb(250, 249, 249);
-    background-color: rgba(36, 35, 35, 0.9);
+    background-color: rgba(31, 27, 27, 0.959);
+    
 }
 
 #container-listChampions, #container-topTeam, #container-filterRoles, #container-stats{
     display: flex;
     flex-wrap: Wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     list-style: none;
-    justify-content: space-evenly;
-    margin-right: 8%;
-    margin-left: 8%;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 #container-listChampions, #container-topTeam, #container-filterRoles{
-    margin-left: 5%;
-    margin-top: 3%;
-    margin-right: 5%;
     background: rgb(12, 12, 12);
     outline-style: ridge;
     outline-color: #ffde44;
 }
-
 #container-filterInfo{
     margin-left: 32%;
     margin-top: 3%;
@@ -111,7 +141,6 @@ p{
     margin-right: 5%;
 
 }
-
 .text1{
     font-size: 15pt;
     color: beige;
@@ -273,7 +302,7 @@ figure .trasera3{
     height: 9em;
     border-radius: 5%;
 }
-.element1, .element2{
+.element1{
     background-color: rgb(252, 252, 248);
     color: rgb(8, 8, 8);
     text-align: center;
@@ -285,57 +314,32 @@ figure .trasera3{
     background-color: #ffde40;
     color:rgb(5, 5, 5);
 }
-.element2:hover{
+.element1:hover{
     background-color: #ffde40;
     color:rgb(3, 3, 3);
 }
 
-.element3, .element4 {
+.element2 {
+    border-radius: 15px;
     background-color: rgb(32, 37, 32); /* Green */
     color: white;
-    padding: 16px 16px;
+    padding: 5px 5px 5px 5px;
     text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 18px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-    display: flex;
-    border-radius: 10%;
 }
   
-.element3:hover {
+.element2:hover {
     background-color: #ffd700;
-}
-
-.element4:hover{
-    background-color: #ffd700;
+    color: #000;
 }
   
-.element3:active {
+.element2:active {
     background-color: #1d2829;
     box-shadow: 0 5px rgb(180, 178, 17);
     transform: translateY(4px);
-}
-
-.element4:active{
-    background-color: #1d2829;
-    box-shadow: 0 5px rgb(180, 178, 17);
-    transform: translateY(4px);
-  
-}
-
-.rol{ 
-    margin-top: 1%;
-    display: flex;
-    margin-left:20%;
-}
-
-.info{ 
-    margin-left: 60%;
-    margin-top: -6%;
-    display: flex;
-
 }
 
  table {
@@ -363,6 +367,26 @@ h2,h4{
 }
 
 .iconf{ 
-    background: #060606;
     padding: 1% 1% 1% 1%;
+}
+@media screen and (max-width:750px){
+    header .logo, header nav{
+        width: 100%;
+       line-height: 100px;
+    }
+    header .logo{
+        margin-left: 35%;
+        width: 40%;
+         width: 40%;
+    }
+    #container-listChampions, #container-topTeam, #container-filterRoles, #container-stats {
+        display: flex;
+        flex-wrap: Wrap;
+        justify-content: center;
+    }
+    .cards, .card-link, .card-bytags {
+width: 90%;
+    }
+ 
+
 }
