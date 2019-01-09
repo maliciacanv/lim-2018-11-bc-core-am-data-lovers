@@ -25,29 +25,38 @@
       <section id="screen-principal" class="wrapper">
 
         <p>¡BIENVENIDO A LA LIGA DE LEYENDAS!</p>
+          <h2 class="text1">League of Legends es un juego competitivo en línea de ritmo frenético, 
+                aquí te mostraremos todos los campeones, 
+                donde podras observar el top de los 10 mejores campeones según su ataque de rango 
+                y filtrar por sus roles y nombres de los campeones.
+          </h2>
         <div id ="container-listChampions"></div>  
       </section>
       <section id="screen-top" >
         <div id="container-topTeam" ></div>
       </section>
       <section id="screen-filter">
-        <div class="rol">
-          <select id="list-roles" class="element1">
-            <option value="Assassin">Assassin</option>
-            <option value="Fighter">Fighter</option>
-            <option value="Mage">Mage</option>
-            <option value="Tank">Tank</option>
-            <option value="Support">Support</option>
-            <option value="Marksman">Marksman</option>
-          </select>
-          <div> <button type="button" id="button-filterRol" class="element3"> Filtrar </button></div> 
-          </div>
-          <div class="info"> 
-          <select id="selection" class="element2"></select> 
-          <div><button type="button" id="button-filterInfo" class="element4"> Filtrar </button></div>
-          </div>
-          <div id="container-filterRoles" class="ontainer-filterRoles"></div>
-          <div id="container-filterInfo" class="container-filterInfo"></div>
+        <a>
+            <div id="filters">
+                <div class="rol">
+                <select id="list-roles" class="element1">
+                  <option value="Assassin">Assassin</option>
+                  <option value="Fighter">Fighter</option>
+                  <option value="Mage">Mage</option>
+                  <option value="Tank">Tank</option>
+                  <option value="Support">Support</option>
+                  <option value="Marksman">Marksman</option>
+                </select>
+                <button type="button" id="button-filterRol" class="element2"> ver rol </button>
+                </div>
+                <div class="info"> 
+                <select id="selection" class="element1"></select> 
+                <button type="button" id="button-filterInfo" class="element2"> ver info </button>
+               </div>
+              </div>
+        </a> 
+        <div id="container-filterRoles" class="ontainer-filterRoles"></div>
+        <div id="container-filterInfo" class="container-filterInfo"></div>
       </section>
       <section id="screen-stats">
         <div id="container-stats"></div>

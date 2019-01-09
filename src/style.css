@@ -30,7 +30,6 @@ body{
     right: 0;
     z-index: 1000;
     background:black;
-
     
 }
 footer{
@@ -43,9 +42,27 @@ footer{
     margin: auto;
     overflow: hidden;
 }
-#screen-principal{
-padding-top: 200px;
-    
+#screen-principal,#screen-top{
+padding-top: 200px;   
+}
+#screen-filter,#screen-stats{
+    padding-top: 250px;   
+}
+#filters{
+    background: #544a7d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #544a7d, #ffd452); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #544a7d, #ffd452);
+    display: flex;
+    flex-wrap: wrap wrap-reverse;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 20px 0px 20px;
+position: fixed;
+left: 0;
+top:0;
+right: 0;
+z-index: 1000;
+margin-top: 190px;
 }
 header .logo{
     float: left;
@@ -285,7 +302,7 @@ figure .trasera3{
     height: 9em;
     border-radius: 5%;
 }
-.element1, .element2{
+.element1{
     background-color: rgb(252, 252, 248);
     color: rgb(8, 8, 8);
     text-align: center;
@@ -297,57 +314,32 @@ figure .trasera3{
     background-color: #ffde40;
     color:rgb(5, 5, 5);
 }
-.element2:hover{
+.element1:hover{
     background-color: #ffde40;
     color:rgb(3, 3, 3);
 }
 
-.element3, .element4 {
+.element2 {
+    border-radius: 15px;
     background-color: rgb(32, 37, 32); /* Green */
     color: white;
-    padding: 16px 16px;
+    padding: 5px 5px 5px 5px;
     text-align: center;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 18px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-    display: flex;
-    border-radius: 10%;
 }
   
-.element3:hover {
+.element2:hover {
     background-color: #ffd700;
-}
-
-.element4:hover{
-    background-color: #ffd700;
+    color: #000;
 }
   
-.element3:active {
+.element2:active {
     background-color: #1d2829;
     box-shadow: 0 5px rgb(180, 178, 17);
     transform: translateY(4px);
-}
-
-.element4:active{
-    background-color: #1d2829;
-    box-shadow: 0 5px rgb(180, 178, 17);
-    transform: translateY(4px);
-  
-}
-
-.rol{ 
-    margin-top: 1%;
-    display: flex;
-    margin-left:20%;
-}
-
-.info{ 
-    margin-left: 60%;
-    margin-top: -6%;
-    display: flex;
-
 }
 
  table {
@@ -377,7 +369,7 @@ h2,h4{
 .iconf{ 
     padding: 1% 1% 1% 1%;
 }
-@media screen and (max-width:420px){
+@media screen and (max-width:750px){
     header .logo, header nav{
         width: 100%;
        line-height: 100px;
@@ -385,7 +377,7 @@ h2,h4{
     header .logo{
         margin-left: 35%;
         width: 40%;
-    width: 40%;
+         width: 40%;
     }
     #container-listChampions, #container-topTeam, #container-filterRoles, #container-stats {
         display: flex;
@@ -395,16 +387,6 @@ h2,h4{
     .cards, .card-link, .card-bytags {
 width: 90%;
     }
-}
-@media screen and (max-height:1000px){
-    footer{
-        top: 0;
-         left: 0;
-         right: 0;
-         z-index: 1000;
-         justify-content: center;
-         display: flex;
-         justify-content: flex-end;
-         margin-top: 1%;
-         }
+ 
+
 }
