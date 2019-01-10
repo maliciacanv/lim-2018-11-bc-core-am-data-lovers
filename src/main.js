@@ -1,12 +1,3 @@
-// conviertiendo la data objeto en array//
-const arrDataLolTotal = Object.values(LOL.data);
-const arrayKeys = Object.values(arrDataLolTotal[0]);
-const newArrayKeys = Object.keys(arrayKeys[12]);
-// llamando a los id de html //
-const containerPrincipal = document.getElementById('container-listChampions');
-document.getElementById('screen-top').style = 'display:none';
-const buttonfirstUser = document.getElementById('topTeam');
-const containerTopTeam = document.getElementById('container-topTeam');
 
 document.getElementById('screen-filter').style = 'display:none';
 const buttonSecondAndThirdUser = document.getElementById('rolAndCharacteristics');
