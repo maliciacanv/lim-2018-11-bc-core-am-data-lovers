@@ -96,14 +96,14 @@ const templateInfoOfChampions = (data) => {
   data.forEach((element) => {
     const cardInfo = `  
     <div class='cards2'>
-    <figure>
+    <figure class='figure-cards2'>
     <img class ='frontal2' src='${element.splash}'/>
-    <div class='trasera2'>
+    <figcaption class='trasera2'>
     <li class='ataque'>Ataque: ${element.info.attack}</li>
     <li class ='magia'>Magia: ${element.info.magic}</li>
     <li class='defensa'>Defensa: ${element.info.defense}</li>
     <li class='dificultad'>Dificultad: ${element.info.difficulty}</li>
-    </div>
+    </figcaption>
     </figure>
     </div>
   `;

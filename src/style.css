@@ -32,10 +32,7 @@ body{
     background:black;
     
 }
-footer{
-    background: #000;
-    position: fixed;
-}
+
 .wrapper{
     width: 100%;
     max-width: 1000px;
@@ -130,8 +127,12 @@ nav > ul li a:hover{
     outline-color: #ffde44;
 }
 #container-filterInfo{
-    margin-left: 32%;
-    margin-top: 3%;
+   max-width: 1200px;
+   margin: 50px auto ;
+   display: flex;
+   flex-direction: raw;
+   justify-content: center;
+   outline-color: #ffde44;
 }
 p{
     color: #f2bc00;
@@ -160,8 +161,18 @@ p{
     border-radius: 5%;
 }
 .cards2{
-    width: 50%;
-    border-radius: 5%;
+    margin: 20px;
+
+
+}
+.figure-cards2{
+    width: 300px;
+    height: 350px;
+    margin: 0;
+    position: relative;
+    transition: all ease .5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
 }
 
 .stats{
@@ -205,20 +216,22 @@ p{
 
 figure{
     width: 100%;
-    height: 100%;
+    height: 90%;
     border-radius: 5%;
     margin: 0;
     position: relative;
     transition: all ease .5s;
     transform-style: preserve-3d;
-    transform: perspective(500px) rotateY(0deg);
+    
 }
 
-figure .frontal, figure .frontal2, figure .trasera, figure .trasera2, figure .frontalTop, figure .traseraTop, figure .frontal3, figure .trasera3{
+figure .frontal, figure .trasera, figure .trasera2, figure .frontalTop, figure .traseraTop,figure .frontal2, figure .frontal3, figure .trasera3{
     width: 100%;
+    
     border-radius: 5px;
     transition: all ease .5s;
     border: 1px solid #ffde44;
+    
 }
 
 figure .frontalTop, figure .traseraTop{
@@ -240,22 +253,25 @@ figure .trasera, figure .trasera2, figure .traseraTop, figure .trasera3{
     transform: perspective(500px) rotateY(180deg);
     backface-visibility: hidden;
     overflow: auto;
-    background: beige;
+    background: #403b4a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #403b4a, #e7e9bb); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #403b4a, #e7e9bb);;;
 }
 figure .traseraTop{
-    background: #ffe642;
+    background: #403b4a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #403b4a, #e7e9bb); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #403b4a, #e7e9bb);
 }
 figure .trasera .name{
     color:rgb(5, 5, 5);
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20pt;
+    font-size: 18pt;
     text-align: center;
 }
 
 figure .trasera hr{
     height: 2px;
-    background: #ffd700;
-    margin-bottom: 2%;
+    background:#ffe642;
 }
 
 figure .trasera .title{
@@ -264,12 +280,25 @@ figure .trasera .title{
     font-size: 8pt;
     text-align: center;
 }
+figure .frontal2,
 figure .trasera2{
-    font-size:20pt;
-    color:rgb(12, 12, 12);
-    font-family: 'Josefin Sans', sans-serif;   
-    background: rgb(245,208,51,0.9);
+    width: 120%;
+    height: 120%;
+    border-radius: 10px;
+    transition: all ease .5s;
+    
 }
+figcaption.trasera2{
+    color:rgb(3, 3, 3);
+    font-family: 'Architects Daughter', cursive;   
+    text-align: center;
+    font-size: 18pt;
+    background: #403b4a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #403b4a, #e7e9bb); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #403b4a, #e7e9bb);
+    
+}
+
 figure .traseraTop {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16pt;
@@ -291,7 +320,9 @@ figure .traseraTop .post-attackrange{
 }
 figure .trasera3{
     color: #060606;
-    background: #ffe642;
+    background: #403b4a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #403b4a, #e7e9bb); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #403b4a, #e7e9bb);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 30pt;
     text-align: center;
@@ -369,10 +400,33 @@ h2,h4{
 .iconf{ 
     padding: 1% 1% 1% 1%;
 }
-@media screen and (max-width:750px){
+footer{
+    width: 100%;
+    background:black;
+    line-height: 10px;
+    position: fixed;
+    bottom: 0;
+ 
+}
+.container-footer{
+    width: 100%;
+    max-width: 1200px;
+    
+}
+label{
+    font-family: 'Architects Daughter', cursive;
+}
+@media screen and (max-width:960px) and (max-width:761){
+    #filters{
+        margin-top: 150px;
+    } 
+}
+
+@media screen and (max-width:760px){
     header .logo, header nav{
         width: 100%;
        line-height: 100px;
+       
     }
     header .logo{
         margin-left: 35%;
@@ -384,9 +438,19 @@ h2,h4{
         flex-wrap: Wrap;
         justify-content: center;
     }
+    #container-filterRoles{
+        margin-top: 70px;
+    }
+
     .cards, .card-link, .card-bytags {
 width: 90%;
+
+    }
+    label{
+        display: none;
     }
  
-
+    #filters{
+        margin-top: 170px;
+    }
 }
