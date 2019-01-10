@@ -10,54 +10,49 @@
   <body>
     <video src="animated-teemo-omegasquad.webm" autoplay loop></video>
     <div id="root"> 
-        <header class="header">
-          <div class="wrapper">
+      <header class="header">
+        <div class="wrapper">
+          <nav>
+            <ul>
+              <li><a href="#" id="topTeam"><i class="icon icon-dial-pad"></i> TOP 10  </a></li>
+              <li><a href="#" id="rolAndCharacteristics"><i class="icon icon-shield"></i> FILTRAR </a></li>
+              <li><a href="#" id="stats"><i class="icon icon-area-graph"></i> ESTADISTICA </a></li>
               <img id= "imagen1"  class='logo'src="https://cdn.atomix.vg/wp-content/uploads/2013/08/LOL.png">
-              <nav>
-                <ul>
-                  <li><a href="#" id="topTeam"><i class="icon icon-dial-pad"></i> TOP 10  </a></li>
-                  <li><a href="#" id="rolAndCharacteristics"><i class="icon icon-shield"></i> FILTRAR </a></li>
-                  <li><a href="#" id="stats"><i class="icon icon-area-graph"></i> ESTADISTICA </a></li>
-                </ul>
-              </nav>
-          </div>
+            </ul>
+          </nav>
+        </div>
       </header> 
       <section id="screen-principal" class="wrapper">
-
         <p>¡BIENVENIDO A LA LIGA DE LEYENDAS!</p>
-          <h2 class="text1">League of Legends es un juego competitivo en línea de ritmo frenético, 
-                aquí te mostramos todos los campeones, 
-                tambien podras observar el top de los 10 mejores campeones según su ataque de rango 
-                y filtrar por sus roles y nombres de los campeones.
-          </h2>
+        <h2 class="text1">¡Tantas cosas que ver, tantos campeones que ser! Transfórmate en alguien nuevo.</h2>
+        <a href="https://lan.leagueoflegends.com/es/" target="_blanck"  id="nav"><i class="icon icon-arrow-with-circle-right"></i>Más info</a>
+        <select id="order">
+          <option value= "00">Asce</option>
+          <option value= "01">Desc</option>
+        </select>
         <div id ="container-listChampions"></div>  
       </section>
       <section id="screen-top" >
         <div id="container-topTeam" ></div>
       </section>
       <section id="screen-filter">
-        
-        <a>
-           
-            <div id="filters">
-                
-                <div class="rol"><label>filtra a tu campón segun el rol que elijas</label>
-                <select id="list-roles" class="element1">
-                  <option value="Assassin">Assassin</option>
-                  <option value="Fighter">Fighter</option>
-                  <option value="Mage">Mage</option>
-                  <option value="Tank">Tank</option>
-                  <option value="Support">Support</option>
-                  <option value="Marksman">Marksman</option>
-                </select>
-                <button type="button" id="button-filterRol" class="element2"> filtrar campeones </button>
-                </div>
-                <div class="info"> 
-                    <label>filtra la info del campeón que deseas </label><select id="selection" class="element1"></select> 
-                <button type="button" id="button-filterInfo" class="element2"> filtrar info </button>
-               </div>
-              </div>
-        </a> 
+        <div id="filters">
+        <div class="rol"><label>filtra a tu campón segun el rol que elijas</label>
+        <select id="list-roles" class="element1">
+          <option value="Assassin">Assassin</option>
+          <option value="Fighter">Fighter</option>
+          <option value="Mage">Mage</option>
+          <option value="Tank">Tank</option>
+          <option value="Support">Support</option>
+          <option value="Marksman">Marksman</option>
+        </select>
+          <button type="button" id="button-filterRol" class="element2"> filtrar campeones </button>
+        </div>
+        <div class="info"> 
+          <label>filtra la info del campeón que deseas </label><select id="selection" class="element1"></select> 
+          <button type="button" id="button-filterInfo" class="element2"> filtrar info </button>
+        </div>
+        </div>
         <div id="container-filterRoles" class="container-filterRoles"></div>
         <div id="container-filterInfo" class="container-filterInfo"></div>
       </section>
@@ -71,10 +66,10 @@
         <a href="https://www.instagram.com/leagueoflegends/?hl=es-la" target="_blanck"><img class="iconf" src="iconos/instagram.png"></a>
         <a href="https://www.youtube.com/channel/UC2t5bjwHdUX4vM2g8TRDq5g" target="_blanck"><img class="iconf" src="iconos/youtube.png"></a>
       </div>
-          </footer>
+    </footer>
     </div>
-      <script src="./data/lol/lol.js"></script>
-      <script src="data.js"></script>
-      <script src="main.js"></script>
+    <script src="./data/lol/lol.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

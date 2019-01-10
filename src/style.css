@@ -16,9 +16,6 @@ video{
     transform: translateX(-50%) translateY(-50%);
     z-index: -1;
    }
-body{
-
-}
 
 .header{
     width: 100%;
@@ -46,34 +43,28 @@ padding-top: 200px;
     padding-top: 250px;   
 }
 #filters{
-    background: #544a7d; /* fallback for old browsers */
+  background: #544a7d; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #544a7d, #ffd452); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #544a7d, #ffd452);
-    display: flex;
-    flex-wrap: wrap wrap-reverse;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 20px 0px 20px;
-position: fixed;
-left: 0;
-top:0;
-right: 0;
-z-index: 1000;
-margin-top: 190px;
-}
-header .logo{
-    float: left;
-    width: 30%;
-    width: 30%;
-    display: flex;
-    margin-left: 30%;
+  display: flex;
+  flex-wrap: wrap wrap-reverse;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 20px 0px 20px;
+  position: fixed;
+  left: 0;
+  top:0;
+  right: 0;
+  z-index: 1000;
+  margin-top: 190px;
 }
 
 nav{
-    
+    top: 0%;
     width: 90%;
     max-width: 1000px;
     justify-content: center;
+    margin-bottom: 0%;
 }
 nav > ul{ 
     list-style: none;    
@@ -84,16 +75,19 @@ nav > ul {
     width: 100%;
     position: relative;
     background-color: rgba(5, 5, 5, 1.0);
-
 }
 nav > ul li {
     display: table-cell;
+}
+header .logo{
+    width:20%;
+    margin-left: 50%;
 }
 nav > ul li a{
     color: rgb(179, 154, 12);
     display: block;
     line-height: 20px;
-    font-size: 25px;
+    font-size: 20px;
     padding: 20px;
     position: relative;
     text-align: center;
@@ -423,15 +417,9 @@ label{
 }
 
 @media screen and (max-width:760px){
-    header .logo, header nav{
-        width: 100%;
-       line-height: 100px;
-       
-    }
-    header .logo{
-        margin-left: 35%;
-        width: 40%;
-         width: 40%;
+    header, header nav{
+      width: 100%;
+      line-height: 100px;
     }
     #container-listChampions, #container-topTeam, #container-filterRoles, #container-stats {
         display: flex;
@@ -443,7 +431,7 @@ label{
     }
 
     .cards, .card-link, .card-bytags {
-width: 90%;
+      width: 90%;
 
     }
     label{

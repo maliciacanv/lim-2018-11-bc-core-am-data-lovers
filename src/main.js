@@ -1,3 +1,11 @@
+const arrDataLolTotal = Object.values(LOL.data);
+const arrayKeys = Object.values(arrDataLolTotal[0]);
+const newArrayKeys = Object.keys(arrayKeys[12]);
+
+const containerPrincipal = document.getElementById('container-listChampions');
+document.getElementById('screen-top').style = 'display:none';
+const buttonfirstUser = document.getElementById('topTeam');
+const containerTopTeam = document.getElementById('container-topTeam');
 
 document.getElementById('screen-filter').style = 'display:none';
 const buttonSecondAndThirdUser = document.getElementById('rolAndCharacteristics');
@@ -12,48 +20,53 @@ const buttonFilter = document.getElementById('button-filterInfo');
 document.getElementById('screen-stats').style = 'display:none';
 const buttonStats = document.getElementById('stats');
 const containerStats = document.getElementById('container-stats');
-// mostrando todos los campeones en la pagina principal 
+
+// mostrando los campeones en la pagina principal 
 const createTemplateCard = (list) => {
   let templateCard = '';
   list.forEach((dataLol) => {
     const card = `
     <div class='cards'>
-    
       <figure>
-       <img class='frontal' src="${ dataLol.splash}"/>
+      <img class='frontal' src="${ dataLol.splash}"/>
+        <li class='name'>${ dataLol.name}</li>
+        <hr>
         <div class='trasera'>
-          <li class='name'>${ dataLol.name}</li>
-          <hr>
           <li class='title'> ${ dataLol.blurb}</li>
         </div>
       </figure>
-    </a>
     </div>`;
     templateCard += card;
   }),
   containerPrincipal.innerHTML = templateCard;
 };
 createTemplateCard(arrDataLolTotal);
+const selectOrder = document.getElementById('order');
+selectOrder.addEventListener('change', () => {
+  const dataOrdenada = lol.sortChampions(arrDataLolTotal, selectOrder.value);
+  createTemplateCard(dataOrdenada);
+});
 
-// mostrando primer usuario topTeam //
+// mostrando primer usuario topTeam 
 const arrDataLolTopTeam = lol.championsTopTeam(arrDataLolTotal);
 const showTopTeam = () => {
   document.getElementById('screen-principal').style = 'display:none';
   document.getElementById('screen-top').style = 'display:block';
   for (let i = 0; i < arrDataLolTopTeam.length; i++) {
-    containerTopTeam.innerHTML +=
-      `<div class="card-link">
-              <figure>
-              <img class="frontalTop" src="${arrDataLolTopTeam[i].splash}"/>
-              <div class="traseraTop">
-              <li class="post-attackrange">Attackrange: ${arrDataLolTopTeam[i].attackrange}</li><hr>
-              <li class="post-names">${arrDataLolTopTeam[i].name}</li>
-              <li class="post-title"> ${arrDataLolTopTeam[i].title}</li>
-              </div>
-              </figure>
-       </div>`;
+    containerTopTeam.innerHTML += ` 
+    <div class="card-link">
+      <figure>
+      <img class="frontalTop" src="${arrDataLolTopTeam[i].splash}"/>
+      <div class="traseraTop">
+        <li class="post-attackrange">Attackrange: ${arrDataLolTopTeam[i].attackrange}</li><hr>
+        <li class="post-names">${arrDataLolTopTeam[i].name}</li>
+        <li class="post-title"> ${arrDataLolTopTeam[i].title}</li>
+      </div>
+      </figure>
+    </div>`;
   }
 };
+
 // mostrando segunda historia de usuario
 const showFilterRoles = (data) => {
   let templateFilter = '';
@@ -62,7 +75,7 @@ const showFilterRoles = (data) => {
     const cardsFilter = `
     <div class="card-bytags">
     <figure>
-      <img class="frontal3" src="${element.splash}"/>
+    <img class="frontal3" src="${element.splash}"/>
       <li class="trasera3">${element.name}</li>    
     </figure>  
     </div>`;
@@ -70,11 +83,13 @@ const showFilterRoles = (data) => {
   });
   containerFilterRoles.innerHTML = templateFilter;
 };
+
 buttonFilterRoles.addEventListener('click', () => {
   const arrDataLolFilterRoles = lol.championsFilterRoles(arrDataLolTotal, selectionRoles.value);
   showFilterRoles(arrDataLolFilterRoles);
 });
-// mostrando tercer usuario 
+
+// mostrando tercer historia de usuario 
 const showFilterInfo = () => {
   document.getElementById('screen-top').style = 'display:none';
   document.getElementById('screen-filter').style = 'display:block';
@@ -87,17 +102,16 @@ const templateInfoOfChampions = (data) => {
   data.forEach((element) => {
     const cardInfo = `  
     <div class='cards2'>
-    <figure class='figure-cards2'>
+    <figure>
     <img class ='frontal2' src='${element.splash}'/>
-    <figcaption class='trasera2'>
-    <li class='ataque'>Ataque: ${element.info.attack}</li>
-    <li class ='magia'>Magia: ${element.info.magic}</li>
-    <li class='defensa'>Defensa: ${element.info.defense}</li>
-    <li class='dificultad'>Dificultad: ${element.info.difficulty}</li>
-    </figcaption>
-    </figure>
+    <div class='trasera2'>
+     <li class='ataque'>Ataque: ${element.info.attack}</li>
+     <li class ='magia'>Magia: ${element.info.magic}</li>
+     <li class='defensa'>Defensa: ${element.info.defense}</li>
+     <li class='dificultad'>Dificultad: ${element.info.difficulty}</li>
     </div>
-  `;
+    </figure>
+    </div>`;
     postCard += cardInfo;
   });
   containerFilterInfo.innerHTML = postCard;
@@ -109,6 +123,7 @@ buttonFilter.addEventListener('click', () => {
   templateInfoOfChampions(resultFilterSelect);
 });
 
+// mostrando la estadistica de los campeones
 const statsClick = () => {
   document.getElementById('screen-filter').style = 'display:none';
   document.getElementById('screen-stats').style = 'display:block';
@@ -136,21 +151,27 @@ const createStats = (data) => {
             <td>${ newArrayKeys[0]}</td>
             <td>${ array.stats.hpperlevel}</td>
             <td>${ array.stats.hp}</td>
-            <td>${window.lol.statOfChampions(5, array)}</td>
-            <td>${window.lol.statOfChampions(10, array)}</td>
-            <td>${window.lol.statOfChampions(15, array)}</td>
-            <td>${window.lol.statOfChampions(18, array)}</td>
+            <td>${window.lol.statOfChampions(5, array, 1)}</td>
+            <td>${window.lol.statOfChampions(10, array, 1)}</td>
+            <td>${window.lol.statOfChampions(15, array, 1)}</td>
+            <td>${window.lol.statOfChampions(18, array, 1)}</td>
             </tr>
+            <tr>
+            <td>${ newArrayKeys[5]}</td>
+            <td>${ array.stats.armorperlevel}</td>
+            <td>${ array.stats.armor}</td>
+            <td>${window.lol.statOfChampions(5, array, 2)}</td>
+            <td>${window.lol.statOfChampions(10, array, 2)}</td>
+            <td>${window.lol.statOfChampions(15, array, 2)}</td>
+            <td>${window.lol.statOfChampions(18, array, 2)}</td>
+
           </table>
         </div>`;
     statsChampions += cards3;
   });
   containerStats.innerHTML = statsChampions;
 };
-createStats(arrDataLolTotal);
-
 
 buttonfirstUser.addEventListener('click', showTopTeam);
 buttonSecondAndThirdUser.addEventListener('click', showFilterInfo);
 buttonStats.addEventListener('click', statsClick);
-
