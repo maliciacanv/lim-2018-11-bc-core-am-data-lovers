@@ -1,6 +1,43 @@
 require('../src/data.js');
+const inputDesor = [ 
+  {
+    name: 'Ahri',
+    blurb: 'Unlike other foxes that roamed the woods of southern Ionia, Ahri had always felt a strange connection to the magical world around her; a connection that was somehow incomplete. Deep inside, she felt the skin she had been born into was an ill fit for ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg'
+  },
+  {
+    name: 'Aatrox', 
+    blurb: 'Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatroxs ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg'
+  },
+  {
+    name: 'Bard',
+    blurb: 'Bard travels through realms beyond the imagination of mortal beings. Some of Valorans greatest scholars have spent their lives trying to understand the mysteries he embodies. This enigmatic spirit has been given many names throughout the history of ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg',
+  },
+  {
+    name: 'Akali',
+    blurb: 'There exists an ancient order originating in the Ionian Isles dedicated to the preservation of balance. Order, chaos, light, darkness -- all things must exist in perfect harmony for such is the way of the universe. This order is known as the Kinkou ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg',
+  },
+  {
+    name: 'Aatrox', 
+    blurb: 'Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatroxs ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg'
+  },
+  {
+    name: 'Cassiopeia',
+    blurb: 'Cassiopeia is a terrifying creature - half woman, half snake - whose slightest glance brings death. The youngest daughter of one of Noxus most influential families, she was once a beautiful and cunning temptress capable of manipulating the hardest ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Cassiopeia_0.jpg',
+  },
+];
 
-const input = [
+const outputOrder = [
+  {
+    name: 'Aatrox', 
+    blurb: 'Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatroxs ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg'
+  },
   {
     name: 'Aatrox', 
     blurb: 'Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatroxs ...',
@@ -21,6 +58,42 @@ const input = [
     blurb: 'Bard travels through realms beyond the imagination of mortal beings. Some of Valorans greatest scholars have spent their lives trying to understand the mysteries he embodies. This enigmatic spirit has been given many names throughout the history of ...',
     splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg',
   },
+  {
+    name: 'Cassiopeia',
+    blurb: 'Cassiopeia is a terrifying creature - half woman, half snake - whose slightest glance brings death. The youngest daughter of one of Noxus most influential families, she was once a beautiful and cunning temptress capable of manipulating the hardest ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Cassiopeia_0.jpg',
+  }
+];
+  
+
+const value = '01';
+
+const input = [
+  {
+    name: 'Aatrox', 
+    blurb: 'Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatroxs ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg'
+  },
+  {
+    name: 'Aatrox', 
+    blurb: 'Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatroxs ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg'
+  },
+  {
+    name: 'Ahri',
+    blurb: 'Unlike other foxes that roamed the woods of southern Ionia, Ahri had always felt a strange connection to the magical world around her; a connection that was somehow incomplete. Deep inside, she felt the skin she had been born into was an ill fit for ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg'
+  },
+  {
+    name: 'Akali',
+    blurb: 'There exists an ancient order originating in the Ionian Isles dedicated to the preservation of balance. Order, chaos, light, darkness -- all things must exist in perfect harmony for such is the way of the universe. This order is known as the Kinkou ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg',
+  },
+  {
+    name: 'Bard',
+    blurb: 'Bard travels through realms beyond the imagination of mortal beings. Some of Valorans greatest scholars have spent their lives trying to understand the mysteries he embodies. This enigmatic spirit has been given many names throughout the history of ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg',
+  },  
   {
     name: 'Cassiopeia',
     blurb: 'Cassiopeia is a terrifying creature - half woman, half snake - whose slightest glance brings death. The youngest daughter of one of Noxus most influential families, she was once a beautiful and cunning temptress capable of manipulating the hardest ...',
@@ -53,9 +126,13 @@ const output = [
     name: 'Aatrox', 
     blurb: 'Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatroxs ...',
     splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg'
+  },
+  {
+    name: 'Aatrox', 
+    blurb: 'Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatroxs ...',
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg'
   }
 ];
-
 
 const inputOne = [
   {
@@ -97,10 +174,6 @@ const inputOne = [
   {
     name: 'Bard', title: 'the Wandering Caretaker', splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg',
     stats: { attackrange: 500 }
-  },
-  {
-    name: 'Braum', title: 'the Heart of the Freljord', splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_0.jpg',
-    stats: { attackrange: 125 }
   }
 ];
 
@@ -193,15 +266,19 @@ const inputTwo = [
 const outputTwo = [
   {
     name: 'Alistar', splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_0.jpg',
+    tags: ['Tank', 'Support']
   },
   { 
     name: 'Anivia', splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_0.jpg',
+    tags: ['Mage', 'Support']
   },
   { 
     name: 'Ashe', splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg',
+    tags: ['Marksman', 'Support']
   },
   { 
     name: 'Bard', splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg',
+    tags: ['Support', 'Mage']
   }
 ];
 
@@ -299,15 +376,17 @@ const inputThree = [
 ];
 
 const outputThree = [
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg',
-    attack: 7,
-    defense: 3,
-    magic: 2,
-    difficulty: 4
+  { name: 'Ashe', splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg',
+    info: { 
+      attack: 7,
+      defense: 3,
+      magic: 2,
+      difficulty: 4
+    }
   }
 ];
 
-const inputFour = [
+const inputFour = 
   {
     name: 'Aatrox',
     tags: ['Fighter', 'Tank'],
@@ -318,9 +397,10 @@ const inputFour = [
       armor: 24.384,
       armorperlevel: 3.8,
     }
-  }
-];
-const outputFour = 962.8;
+  };
+const outputFour = '962.80';
+
+const outputFive = '43.38';
 
 describe('lol', () => {
   it('deberia ser un objeto', () => {
@@ -330,36 +410,48 @@ describe('lol', () => {
     it('deberia ser una funcion', () => {
       expect(typeof lol.sortChampions).toBe('function');
     });
-    it('deberia retornar un array de objetos ordenado de z-a y a-z segun el nombre', () => {
-      expect(lol.sortChampions(input, '01')).not.toEqual(output);
+    it('deberia retornar un array de objetos ordenado de a-z segun el nombre', () => {
+      expect(lol.sortChampions(inputDesor, '00')).toEqual(outputOrder);
+    });
+    it('deberia retornar un array de objetos ordenado de z-a segun el nombre', () => {
+      expect(lol.sortChampions(outputOrder, value)).toEqual(output);
+    });
+    it('deberia retornar nulo si no se selecciona', () => {
+      expect(lol.sortChampions(input)).toEqual(0);
     });
     describe('lol.championsTopTeam', () => {
       it('deberia ser una funcion', () => {
         expect(typeof lol.championsTopTeam).toBe('function');
       });
       it('deberia retornar un array con 10 objetos de mayor numero de ataque de rango', () => {
-        expect(lol.championsTopTeam(inputOne)).not.toEqual(outputOne);
+        expect(lol.championsTopTeam(inputOne)).toEqual(outputOne);
       });
       describe('lol.championsFilterRoles', () => {
         it('deberia ser una funcion', () => {
           expect(typeof lol.championsFilterRoles).toBe('function');
         });
         it('deberia retornar un array con los campeones filtrados por roles', () => {
-          expect(lol.championsFilterRoles(inputTwo, 'Support')).not.toEqual(outputTwo);
+          expect(lol.championsFilterRoles(inputTwo, 'Support')).toEqual(outputTwo);
         });
         describe('lol.filterInfoChampions', () => {
           it('deberia ser una funcion', () => {
             expect(typeof lol.filterInfoChampions).toBe('function');
           });
-          it('deberia retornar un array del campeon filtrado por nombre', () => {
-            expect(lol.filterInfoChampions(inputThree, 'Ashe')).not.toEqual(outputThree);
+          it('deberia retornar un array de objetos del campeon filtrado por nombre', () => {
+            expect(lol.filterInfoChampions(inputThree, 'Ashe')).toEqual(outputThree);
           });
           describe('lol.statOfChampions', () => {
             it('deberia ser una funcion', () => {
               expect(typeof lol.statOfChampions).toBe('function');
             });
             it('deberia retornar un array con el resultado de la suma y multiplicación de nivel de vida del nivel 5 con dos decimales', () => {
-              expect(lol.statOfChampions(parseFloat(5, inputFour, 1))).not.toEqual(outputFour);
+              expect(lol.statOfChampions(inputFour, 5, 1)).toEqual(outputFour);
+            });
+            it('deberia retornar un array con el resultado de la suma y multiplicación de nivel de vida del nivel 5 con dos decimales', () => {
+              expect(lol.statOfChampions(inputFour, 5, 2)).toEqual(outputFive);
+            });
+            it('deberia retornar 0', () => {
+              expect(lol.statOfChampions(inputFour, 5, 0)).toEqual(0);
             });
           });
         });
