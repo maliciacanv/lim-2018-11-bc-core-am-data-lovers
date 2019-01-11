@@ -127,13 +127,6 @@ buttonFilter.addEventListener('click', () => {
 });
 
 // mostrando la estadistica de los campeones
-const statsClick = () => {
-  document.getElementById('screen-top').style.display = 'none';
-  document.getElementById('screen-principal').style.display = 'none';
-  document.getElementById('screen-filter').style.display = 'none';
-  document.getElementById('screen-stats').style.display = 'block';
-  createStats(arrDataLolTotal);
-};
 const createStats = (data) => {
   let statsChampions = '';
   data.forEach((array) => {
@@ -156,26 +149,33 @@ const createStats = (data) => {
             <td>${ newArrayKeys[0]}</td>
             <td>${ array.stats.hpperlevel}</td>
             <td>${ array.stats.hp}</td>
-            <td>${window.lol.statOfChampions(5, array, 1)}</td>
-            <td>${window.lol.statOfChampions(10, array, 1)}</td>
-            <td>${window.lol.statOfChampions(15, array, 1)}</td>
-            <td>${window.lol.statOfChampions(18, array, 1)}</td>
+            <td>${window.lol.statOfChampions(array, 5, 1)}</td>
+            <td>${window.lol.statOfChampions(array, 10, 1)}</td>
+            <td>${window.lol.statOfChampions(array, 15, 1)}</td>
+            <td>${window.lol.statOfChampions(array, 15, 1)}</td>
             </tr>
             <tr>
             <td>${ newArrayKeys[5]}</td>
             <td>${ array.stats.armorperlevel}</td>
             <td>${ array.stats.armor}</td>
-            <td>${window.lol.statOfChampions(5, array, 2)}</td>
-            <td>${window.lol.statOfChampions(10, array, 2)}</td>
-            <td>${window.lol.statOfChampions(15, array, 2)}</td>
-            <td>${window.lol.statOfChampions(18, array, 2)}</td>
-
+            <td>${window.lol.statOfChampions(array, 5, 2)}</td>
+            <td>${window.lol.statOfChampions(array, 10, 2)}</td>
+            <td>${window.lol.statOfChampions(array, 15, 2)}</td>
+            <td>${window.lol.statOfChampions(array, 18, 2)}</td>
           </table>
         </div>`;
     statsChampions += cards3;
   });
   containerStats.innerHTML = statsChampions;
 };
+const statsClick = () => {
+  document.getElementById('screen-top').style.display = 'none';
+  document.getElementById('screen-principal').style.display = 'none';
+  document.getElementById('screen-filter').style.display = 'none';
+  document.getElementById('screen-stats').style.display = 'block';
+  createStats(arrDataLolTotal);
+};
+
 
 buttonfirstUser.addEventListener('click', showTopTeam);
 buttonSecondAndThirdUser.addEventListener('click', showFilterInfo);
