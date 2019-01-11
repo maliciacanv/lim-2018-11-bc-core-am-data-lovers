@@ -27,7 +27,12 @@ video{
     right: 0;
     z-index: 1000;
     background:black;
+    display: flex;
     
+}
+.logo{
+    width: 100px;
+    height:50px ;
 }
 
 .wrapper{
@@ -36,8 +41,9 @@ video{
     margin: auto;
     overflow: hidden;
 }
+
 #screen-principal,#screen-top{
-padding-top: 200px;   
+padding-top: 80px;   
 }
 #screen-filter,#screen-stats{
     padding-top: 250px;   
@@ -56,7 +62,7 @@ padding-top: 200px;
   top:0;
   right: 0;
   z-index: 1000;
-  margin-top: 190px;
+  margin-top: 70px;
 }
 
 nav{
@@ -79,10 +85,7 @@ nav > ul {
 nav > ul li {
     display: table-cell;
 }
-header .logo{
-    width:20%;
-    margin-left: 50%;
-}
+
 nav > ul li a{
     color: rgb(179, 154, 12);
     display: block;
@@ -111,8 +114,12 @@ nav > ul li a:hover{
     justify-content: center;
     list-style: none;
     justify-content: space-between;
-    margin-right: 10%;
-    margin-left: 10%;
+}
+#container-listChampions{
+    margin-top: 25px;
+}
+#container-filterRoles{
+    margin-top: -90px;
 }
 
 #container-listChampions, #container-topTeam, #container-filterRoles{
@@ -127,6 +134,7 @@ nav > ul li a:hover{
    flex-direction: raw;
    justify-content: center;
    outline-color: #ffde44;
+    margin-top: -300px;
 }
 p{
     color: #f2bc00;
@@ -138,12 +146,36 @@ p{
 }
 .text1{
     font-size: 15pt;
-    color: beige;
+    color:blanchedalmond;
     text-align: center;
     margin-top: 2%;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Happy Monkey', cursive;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 18px;
+}
+#nav{
+   background: black;
+   padding: 10PX;
+   margin-left: 15%;
+   color: #e7e9bb;
+   font-family: 'Architects Daughter', cursive;
+   border-radius: 10px;
+   border: #f2bc00 solid 3px;
+   font-size: 25px;
+}
+#nav:hover{
+    background: white;
+    color: #000; 
+}
+#order{
+width: 150px;
+height: 40px;
+font-family: 'Happy Monkey', cursive;
+font-size: 20px;
+border: #050505 solid 2px;
+display: block;
+margin-left: 40%;
 }
 
 .cards, .card-link, .card-bytags{
@@ -155,19 +187,10 @@ p{
     border-radius: 5%;
 }
 .cards2{
-    margin: 20px;
-
-
+    margin: 20%;
+  
 }
-.figure-cards2{
-    width: 300px;
-    height: 350px;
-    margin: 0;
-    position: relative;
-    transition: all ease .5s;
-    transform-style: preserve-3d;
-    transform: perspective(600px) rotateY(0deg);
-}
+
 
 .stats{
     border: #f2bc00 solid 1px;
@@ -221,7 +244,6 @@ figure{
 
 figure .frontal, figure .trasera, figure .trasera2, figure .frontalTop, figure .traseraTop,figure .frontal2, figure .frontal3, figure .trasera3{
     width: 100%;
-    
     border-radius: 5px;
     transition: all ease .5s;
     border: 1px solid #ffde44;
@@ -243,13 +265,13 @@ figure .trasera, figure .trasera2, figure .traseraTop, figure .trasera3{
     position: absolute;
     width: 88%;
     top: 0;
-    padding: 6%;
+    
     transform: perspective(500px) rotateY(180deg);
     backface-visibility: hidden;
     overflow: auto;
-    background: #403b4a; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #403b4a, #e7e9bb); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #403b4a, #e7e9bb);;;
+    background: beige;
+    font-family: 'Happy Monkey', cursive;
+    font-size: 50px;
 }
 figure .traseraTop{
     background: #403b4a; /* fallback for old browsers */
@@ -410,13 +432,19 @@ footer{
 label{
     font-family: 'Architects Daughter', cursive;
 }
-@media screen and (max-width:960px) and (max-width:761){
-    #filters{
-        margin-top: 150px;
-    } 
-}
+
 
 @media screen and (max-width:760px){
+    #screen-principal, #screen-top,screen-satas {
+        padding-top: 120px;
+    }
+    #screen-filter {
+        margin-top: 60px;
+    }
+
+#container-filterRoles{
+    margin-top: -250px;
+}
     header, header nav{
       width: 100%;
       line-height: 100px;
@@ -425,11 +453,15 @@ label{
         display: flex;
         flex-wrap: Wrap;
         justify-content: center;
+        
     }
     #container-filterRoles{
         margin-top: 70px;
     }
+    #container-filterInfo{
+        margin-top: -10px;
 
+    }
     .cards, .card-link, .card-bytags {
       width: 90%;
 
@@ -439,6 +471,17 @@ label{
     }
  
     #filters{
-        margin-top: 170px;
+        margin-top: 130px;
     }
+    .wrapper{
+       
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        overflow: hidden;
+    }
+    #order{
+        margin-left: 60%
+    }
+    
 }

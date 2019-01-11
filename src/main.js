@@ -3,11 +3,12 @@ const arrayKeys = Object.values(arrDataLolTotal[0]);
 const newArrayKeys = Object.keys(arrayKeys[12]);
 
 const containerPrincipal = document.getElementById('container-listChampions');
-document.getElementById('screen-top').style = 'display:none';
+document.getElementById('screen-top').style.display = 'none';
+
 const buttonfirstUser = document.getElementById('topTeam');
 const containerTopTeam = document.getElementById('container-topTeam');
 
-document.getElementById('screen-filter').style = 'display:none';
+document.getElementById('screen-filter').style.display = 'none';
 const buttonSecondAndThirdUser = document.getElementById('rolAndCharacteristics');
 const selectionRoles = document.getElementById('list-roles');
 const buttonFilterRoles = document.getElementById('button-filterRol');
@@ -17,7 +18,7 @@ const selectionOption = document.getElementById('selection');
 const containerFilterInfo = document.getElementById('container-filterInfo');
 const buttonFilter = document.getElementById('button-filterInfo');
 
-document.getElementById('screen-stats').style = 'display:none';
+document.getElementById('screen-stats').style.display = 'none';
 const buttonStats = document.getElementById('stats');
 const containerStats = document.getElementById('container-stats');
 
@@ -50,8 +51,8 @@ selectOrder.addEventListener('change', () => {
 // mostrando primer usuario topTeam 
 const arrDataLolTopTeam = lol.championsTopTeam(arrDataLolTotal);
 const showTopTeam = () => {
-  document.getElementById('screen-principal').style = 'display:none';
-  document.getElementById('screen-top').style = 'display:block';
+  document.getElementById('screen-principal').style.display = 'none';
+  document.getElementById('screen-top').style.display = 'block';
   for (let i = 0; i < arrDataLolTopTeam.length; i++) {
     containerTopTeam.innerHTML += ` 
     <div class="card-link">
@@ -70,7 +71,7 @@ const showTopTeam = () => {
 // mostrando segunda historia de usuario
 const showFilterRoles = (data) => {
   let templateFilter = '';
-  document.getElementById('screen-filter').style = 'display:block';
+  document.getElementById('screen-filter').style.display = 'block';
   data.forEach((element) => {
     const cardsFilter = `
     <div class="card-bytags">
@@ -91,8 +92,10 @@ buttonFilterRoles.addEventListener('click', () => {
 
 // mostrando tercer historia de usuario 
 const showFilterInfo = () => {
-  document.getElementById('screen-top').style = 'display:none';
-  document.getElementById('screen-filter').style = 'display:block';
+  document.getElementById('screen-top').style.display = 'none';
+  document.getElementById('screen-principal').style.display = 'none';
+  // document.getElementById('screen-top').style = 'display:none';
+  document.getElementById('screen-filter').style.display = 'block';
   for (let i = 0; i < arrDataLolTotal.length; i++) {
     selectionOption.innerHTML += `<option value='${arrDataLolTotal[i].name}'>${arrDataLolTotal[i].name}</option>`;
   }
@@ -118,15 +121,17 @@ const templateInfoOfChampions = (data) => {
 };
 
 buttonFilter.addEventListener('click', () => {
-  document.getElementById('container-filterRoles').style = 'display:none';
+  document.getElementById('container-filterRoles').style.display = 'none';
   const resultFilterSelect = lol.filterInfoChampions(arrDataLolTotal, selectionOption.value);
   templateInfoOfChampions(resultFilterSelect);
 });
 
 // mostrando la estadistica de los campeones
 const statsClick = () => {
-  document.getElementById('screen-filter').style = 'display:none';
-  document.getElementById('screen-stats').style = 'display:block';
+  document.getElementById('screen-top').style.display = 'none';
+  document.getElementById('screen-principal').style.display = 'none';
+  document.getElementById('screen-filter').style.display = 'none';
+  document.getElementById('screen-stats').style.display = 'block';
   createStats(arrDataLolTotal);
 };
 const createStats = (data) => {
