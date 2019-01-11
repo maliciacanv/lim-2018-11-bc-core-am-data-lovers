@@ -447,10 +447,10 @@ describe('lol', () => {
             it('deberia retornar un array con el resultado de la suma y multiplicación de nivel de vida del nivel 5 con dos decimales', () => {
               expect(lol.statOfChampions(inputFour, 5, 1)).toEqual(outputFour);
             });
-            it('deberia retornar un array con el resultado de la suma y multiplicación de nivel de vida del nivel 5 con dos decimales', () => {
+            it('deberia retornar un array con el resultado de la suma y multiplicación de nivel de armadura del nivel 5 con dos decimales', () => {
               expect(lol.statOfChampions(inputFour, 5, 2)).toEqual(outputFive);
             });
-            it('deberia retornar 0', () => {
+            it('deberia retornar 0 para ninguno de los casos', () => {
               expect(lol.statOfChampions(inputFour, 5, 0)).toEqual(0);
             });
           });
